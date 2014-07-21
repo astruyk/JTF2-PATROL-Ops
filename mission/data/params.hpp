@@ -19,14 +19,14 @@ class PO3_param_missions_title {
 		title = "Number of Missions";
 		values[]={1,2,3,5,7,9,15,30,99};
 		texts[]={"One","Two","Three","Five","Seven","Nine","Fifteen","Thirty","Unlimited"};
-		default=3;
+		default=5;
 		code = "PO3_param_missioncount = if(%1 < 99)then{%1}else{-1};";
 	};
 	class param_PO3_missionskill {
 		title = "Mission Difficulty";
 		values[]={1,2,4,6};
 		texts[]={$STR_PO3_TEXT_LOW,$STR_PO3_TEXT_MED,$STR_PO3_TEXT_HIGH,$STR_PO3_TEXT_ULTRA};
-		default=6;
+		default=2;
 		code = "PO3_param_missionskill = (%1/3);";
 	};
 	class param_PO3_ai_skill {
@@ -40,7 +40,7 @@ class PO3_param_missions_title {
 		title = $STR_PO3_PARAM_SETAITKILL;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
-		default=1;
+		default=0;
 		code = "PO3_param_ai_easyKill = if(%1 > 0)then{true}else{false};";
 	};
 class PO3_param_ambient_title {
@@ -61,14 +61,14 @@ class PO3_param_ambient_title {
 		title = "Ambient Ground Patrols";
 		values[]={0,400,600,800,1200};
 		texts[]={$STR_PO3_TEXT_OFF,$STR_PO3_TEXT_LOW,$STR_PO3_TEXT_MED,$STR_PO3_TEXT_HIGH,$STR_PO3_TEXT_ULTRA};
-		default=800;
+		default=400;
 		code = "PO3_param_ambientpatrolgnd = if(%1 > 0)then{ PO3_count_ambientpatrolgnd = %1; true}else{false};";
 	};
 	class param_PO3_ambientradius {
 		title = "Ambient Spawn Radius";
 		values[]={0,500,1000,1500,2000,2500,5000,10000};
 		texts[]={$STR_PO3_TEXT_OFF,"500","1000","1500","2000","2500","5000","10000"};
-		default=1500;
+		default=2500;
 		code = "PO3_radius_ambientpatrolgnd = %1;";
 	};
 class PO3_param_injury_title {
@@ -104,28 +104,28 @@ class PO3_param_respawn_title {
 		title = $STR_PO3_PARAM_RESPAWNTIME;
 		values[]={10,20,30,40,50,60,70,90,120,300};
 		texts[]={"10","20","30","40","50","60","70","90","120","300"};
-		default=30;
+		default=60;
 		code = "PO3_param_respawn_playertime = %1;";
 	};
 	class param_PO3_respawn_rallypoint {
 		title = $STR_PO3_PARAM_RESPAWNRALLY;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
-		default=1;
+		default=0;
 		code = "PO3_param_respawn_rallypoint_allow = if(%1 > 0)then{true}else{false};";
 	};
 	class param_PO3_respawn_halo_allow {
 		title = $STR_PO3_PARAM_RESPAWNHALO;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
-		default=1;
+		default=0;
 		code = "PO3_param_respawn_halo_allow = if(%1 > 0)then{true}else{false};";
 	};
 	class param_PO3_respawn_halo_time {
 		title = $STR_PO3_PARAM_RESPAWNHALOTIME;
 		values[]={0,60,300,600,900,1200,1800,3600,7200,86400};
 		texts[]={"None","1min","5mins","10mins","15mins","20mins","30mins","60mins","120mins","24hrs"};
-		default=60;
+		default=300;
 		code = "PO3_param_respawn_halo_time = %1;";
 	};
 	class param_PO3_respawn_deathcount {
@@ -161,7 +161,7 @@ class PO3_param_gameplay_title {
 		title = $STR_PO3_PARAM_GRPMARK_SQD;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
-		default=1;
+		default=0;
 		code = "PO3_param_grpmark_squad_allow = if(%1 > 0)then{true}else{false};";
 	};
 
@@ -176,7 +176,7 @@ class PO3_param_playergame_title {
 		title = $STR_PO3_PARAM_PLAYRFATIGUE;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_DISABLED,$STR_PO3_TEXT_ENABLED};
-		default=1;
+		default=0;
 		code = "PO3_param_player_fatigue = if(%1 > 0)then{true}else{false};";
 	};
 	class param_PO3_hud_squadlist {
@@ -197,7 +197,7 @@ class PO3_param_playergame_title {
 		title = $STR_PO3_PARAM_3DVWALKER;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
-		default=0;
+		default=1;
 		code = "PO3_param_camera_restrict_3dvwalker = if(%1 > 0)then{true}else{false};";
 	};
 
