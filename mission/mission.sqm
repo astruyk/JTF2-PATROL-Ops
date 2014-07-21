@@ -33,12 +33,13 @@ class Mission
 		"A3_Soft_F_MRAP_01",
 		"A3_Characters_F_Civil",
 		"A3_Animals_F_Rabbit",
-		"A3_Armor_F_EPC_MBT_01"
+		"A3_Armor_F_EPC_MBT_01",
+		"a3_characters_f"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
-		"a3_characters_f_beta",
+		"a3_characters_f",
 		"A3_Armor_F_Panther",
 		"A3_Soft_F_Gamma_HEMTT",
 		"A3_Soft_F_Quadbike",
@@ -46,7 +47,6 @@ class Mission
 		"A3_Armor_F_EPC_MBT_01",
 		"A3_Armor_F_AMV",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_gamma_ammoboxes",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Air_F_Beta_Heli_Attack_01",
@@ -2089,7 +2089,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=59;
+		items=63;
 		class Item0
 		{
 			position[]={15191.997,17.924004,17367};
@@ -2520,6 +2520,34 @@ class Mission
 			text="Marina Base";
 			type="respawn_naval";
 			colorName="ColorWEST";
+		};
+		class Item59
+		{
+			position[]={9354.876,-0.10763875,24164.168};
+			name="jtf2_ts_info";
+			text="Join us on teamspeak: www.jointtaskforce2.com";
+			type="mil_dot";
+		};
+		class Item60
+		{
+			position[]={9331.835,0.033855103,24503.801};
+			name="jtf2_welcome";
+			text="Welcome to JTF2's Patrol Ops!";
+			type="mil_dot";
+		};
+		class Item61
+		{
+			position[]={9359.1738,0.058991149,23815.506};
+			name="jtf2_pilot";
+			text="If you want to fly you must join the TS 'Aviation and Command' channel.";
+			type="mil_warning";
+		};
+		class Item62
+		{
+			position[]={9359.1738,-0.039583281,23425.443};
+			name="jtf2_pilot_1";
+			text="Please listen to your squad leads and play nice!";
+			type="mil_warning";
 		};
 	};
 	class Sensors
