@@ -1,5 +1,6 @@
 ["INIT",format["Executing %1 init.sqf",missionName],true] call PO3_fnc_log;
 
+if (isServer) then { [zeusModule,true] execVM "ADV_zeus.sqf"; };
 [] execVM "Patrol_Ops_3.sqf";
 
 if(!isDedicated) then {
