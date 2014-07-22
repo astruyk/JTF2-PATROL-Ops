@@ -72,8 +72,8 @@ class Mission
 	randomSeed=11588837;
 	class Intel
 	{
-		briefingName="Patrol Ops 3.1 - NATO";
-		overviewText="Patrol Operations is a dynamic mission generator with random objectives designed for combined arms co-operative tactical gameplay by larger groups of players.";
+		briefingName="JTF2 Patrol Ops 3.1 - NATO";
+		overviewText="JTF2 modified version of Patrol Ops 3.1.";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
@@ -1017,6 +1017,7 @@ class Mission
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
+					text="zeusModule";
 				};
 			};
 		};

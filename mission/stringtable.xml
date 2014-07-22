@@ -486,13 +486,13 @@
 	</Package>
 	<Package name="MPSFHeader">
 		<Key ID="STR_MISSION_AUTHOR">
-			<Original>Eightysix</Original>
+			<Original>Eightysix (Modified by JTF2)</Original>
 		</Key>
 		<Key ID="STR_MISSION_NAME">
-			<Original>Patrol Ops 3.1 NATO</Original>
+			<Original>JTF2 Patrol Ops 3.1 NATO</Original>
 		</Key>
 		<Key ID="STR_MISSION_DESC">
-			<Original>Patrol Operations is a dynamic mission generator with random objectives designed for combined arms co-operative tactical gameplay by larger groups of players.</Original>
+			<Original>JTF2 Patrol Ops is a modified version of Patrol Ops 3.1 - customized to fit JTF2's style.</Original>
 			<French>Opérations de patrouille est un générateur de missions aléatoires dynamiques offrant un gameplay tactique pour les grands groupes de joueurs.</French>
 			<Polish>Operacje Patrolowe to generator misji dynamicznych z losowymi zadaniami zaprojektowanymi z myślą o taktycznej, kooperacyjnej rozgrywce dla większych grup graczy z wykorzystaniem szerokiego spektrum uzbrojenia.</Polish>
 			<Portuguese>Operações de patrulha é um gerador de missão dinâmica, com objetivos aleatórios projetados para armas combinadas gameplay tático cooperativo por grandes grupos de jogadores.</Portuguese>
