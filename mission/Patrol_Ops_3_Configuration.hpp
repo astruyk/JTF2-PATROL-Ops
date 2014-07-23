@@ -30,16 +30,16 @@ PO3_preDefinedEnemySquads = [
 	,["EN_GroupForce_2", ["O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AT_F","O_Soldier_LAT_F"]]	// Fireteam 2
 	,["EN_GroupForce_3", ["O_Soldier_TL_F","O_Soldier_GL_F","O_G_Soldier_lite_F","O_soldierU_medic_F"]]	// Fireteam 3
 	,["EN_GroupForce_4", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AR_F","O_Soldier_AAR_F"]]		// Fireteam 4
-	,["EN_GroupForce_5", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AT_F","O_Soldier_AAT_F"]]		// Fireteam 5
+	,["EN_GroupForce_5", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_LAT_F","O_Soldier_F"]]			// Fireteam 5
 	,["EN_GroupForce_6", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AT_F","O_soldier_exp_F"]]		// Fireteam 6
-	,["EN_GroupForce_7", ["O_Soldier_TL_F","O_Soldier_F","O_G_Soldier_lite_F","O_Soldier_AT_F"]]		// Fireteam 7
+	,["EN_GroupForce_7", ["O_Soldier_TL_F","O_Soldier_F","O_G_Soldier_lite_F","O_Soldier_LAT_F"]]	// Fireteam 7
 	,["EN_GroupForce_8", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_GL_F","O_Soldier_A_F"]]			// Fireteam 8
 	,["EN_GroupForce_9", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_LAT_F"]]		// Fireteam 9
 	,["EN_PatrolGroup0", ["O_recon_TL_F","O_recon_F","O_recon_LAT_F","O_recon_M_F"]]				// Fireteam Recon 0
 	,["EN_PatrolGroup1", ["O_recon_TL_F","O_recon_F","O_recon_LAT_F","O_recon_medic_F"]]			// Fireteam Recon 1
 	,["EN_PatrolGroup2", ["O_recon_TL_F","O_recon_JTAC_F","O_recon_M_F","O_recon_exp_F"]]			// Fireteam Recon 2
 	,["EN_PatrolGroup3", ["O_recon_TL_F","O_recon_JTAC_F","O_recon_LAT_F","O_recon_exp_F"]]			// Fireteam Recon 3
-	,["EN_PatrolGroup4", ["O_recon_TL_F","O_recon_JTAC_F","O_recon_LAT_F","O_recon_medic_F"]]		// Fireteam Recon 4
+	,["EN_PatrolGroup4", ["O_recon_TL_F","O_recon_JTAC_F","O_recon_F","O_recon_medic_F"]]			// Fireteam Recon 4
 	,["EN_Squad_Divers", ["O_diver_TL_F","O_diver_F","O_diver_F","O_diver_exp_F"]]					// Diver Team 0
 	,["EN_Squad_Sniper", ["O_sniper_F","O_spotter_F"]]												// Sniper Team 0
 /* AAF Forces
