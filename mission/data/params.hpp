@@ -118,7 +118,7 @@ class PO3_param_respawn_title {
 		title = $STR_PO3_PARAM_RESPAWNHALO;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
-		default=0;
+		default=1;
 		code = "PO3_param_respawn_halo_allow = if(%1 > 0)then{true}else{false};";
 	};
 	class param_PO3_respawn_halo_time {
