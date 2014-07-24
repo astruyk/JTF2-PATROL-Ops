@@ -125,11 +125,12 @@ class Mission
 				class Item0
 				{
 					position[]={15198.41,17.923645,17348.439};
-					azimut=227.47151;
+					azimut=227.472;
 					special="NONE";
 					id=0;
 					side="WEST";
 					vehicle="B_recon_TL_F";
+					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.5;
 					description="HQ Commander";
