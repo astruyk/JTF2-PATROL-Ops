@@ -29,10 +29,10 @@ if(PO3SRV) then {
 	if(isNil "PO3_active_side_guer") then { createCenter resistance };
 	if(isNil "PO3_active_side_civ")  then { createCenter civilian };
 	if(isNil "PO3_active_side_logic") then { createCenter sideLogic };
-	west setFriend [civilian, 1]; west setFriend [east, 0];// west setFriend [resistance, 0];
-	east setFriend [civilian, 1]; east setFriend [west, 0];// east setFriend [resistance, 0];
+	west setFriend [civilian, 1]; west setFriend [east, 0]; west setFriend [resistance, 1];
+	east setFriend [civilian, 1]; east setFriend [west, 0]; // east setFriend [resistance, 0];
 //	resistance setFriend [civilian,0]; resistance setFriend [east,0]; resistance setFriend [west,0];
-	civilian setFriend [east,1]; civilian setFriend [west,1];// civilian setFriend [resistance, 1];
+	civilian setFriend [east,1]; civilian setFriend [west,1]; civilian setFriend [resistance, 1];
 	["Centers","All Centers Created and Friendships set"] call PO3_fnc_log;
 
 	PO3_respawn_positions_global = PO3_CfgRespawn_PreDefinedPositions; publicVariable "PO3_respawn_positions_global";
