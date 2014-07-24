@@ -33,7 +33,7 @@ PO3_preDefinedEnemySquads = [
 	,["EN_GroupForce_5", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_LAT_F","O_Soldier_F"]]			// Fireteam 5
 	,["EN_GroupForce_6", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AT_F","O_soldier_exp_F"]]		// Fireteam 6
 	,["EN_GroupForce_7", ["O_Soldier_TL_F","O_Soldier_F","O_G_Soldier_lite_F","O_Soldier_LAT_F"]]	// Fireteam 7
-	,["EN_GroupForce_8", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_GL_F","O_Soldier_A_F"]]			// Fireteam 8
+	,["EN_GroupForce_8", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AAA_F","O_Soldier_A_F"]]			// Fireteam 8
 	,["EN_GroupForce_9", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_LAT_F"]]		// Fireteam 9
 	,["EN_PatrolGroup0", ["O_recon_TL_F","O_recon_F","O_recon_LAT_F","O_recon_M_F"]]				// Fireteam Recon 0
 	,["EN_PatrolGroup1", ["O_recon_TL_F","O_recon_F","O_recon_LAT_F","O_recon_medic_F"]]			// Fireteam Recon 1
