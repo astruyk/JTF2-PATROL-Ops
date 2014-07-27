@@ -27,7 +27,6 @@ if(isNil "PO3_param_respawn_halo_time") then { PO3_param_respawn_halo_time = 0 }
 if(isNil "PO3_param_respawn_playertime") then { PO3_param_respawn_playertime = 10 };
 if(isNil "PO3_param_baseProtection") then { PO3_param_baseProtection = false };
 if(isNil "PO3_param_ambient_weather_enable") then { PO3_param_ambient_weather_enable = false };
-if(isNil "PO3_param_player_fatigue") then { PO3_param_player_fatigue = true };
 if(isNil "PO3_param_injury_down") then { PO3_param_injury_down = false };
 if(isNil "PO3_respawn_halo_nextAvailable") then { PO3_respawn_halo_nextAvailable = 0 };
 if(isNil "PO3_param_ai_easyKill") then { PO3_param_ai_easyKill = false };

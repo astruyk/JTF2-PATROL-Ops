@@ -761,14 +761,6 @@
 			<French>====== Options des Joueurs ======</French>
 			<Czech>====== Uživatelské nastavení ======</Czech>
 		</Key>
-		<Key ID="STR_PO3_PARAM_PLAYRFATIGUE">
-			<Original>Enable Player Fatigue</Original>
-			<Spanish>Habilitar fatiga</Spanish>
-			<Polish>Włącz zmęczenie gracza</Polish>
-			<German>Erschöpfung aktivieren</German>
-			<French>Activer la fatigue</French>
-			<Czech>Povolit únavu hráče</Czech>
-		</Key>
 		<Key ID="STR_PO3_PARAM_HUD2DCURSOR">
 			<Original>Enable Hud 2D Cursor Names</Original>
 			<Spanish>Habilitar nombres en el Hud en 2D</Spanish>

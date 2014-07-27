@@ -97,7 +97,6 @@ if(PO3CLI) then {
 	[] spawn PO3_fnc_grpmark_draw;
 	[] spawn PO3_fnc_interaction_else;
 	[] spawn PO3_fnc_interaction_self;
-	player enableFatigue PO3_param_player_fatigue;
 	if(PO3_param_respawn_halo_allow) then { ["halo"] call PO3_fnc_addRespawnPosLocal; };
 
 	_preAssignedRole = player setVariable ["PO3_VAR_roleAttribute",nil];
