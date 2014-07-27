@@ -172,13 +172,6 @@ class PO3_param_playergame_title {
 	default = 0;
 	code = "";
 };
-	class param_PO3_player_fatigue {
-		title = $STR_PO3_PARAM_PLAYRFATIGUE;
-		values[]={0,1};
-		texts[]={$STR_PO3_TEXT_DISABLED,$STR_PO3_TEXT_ENABLED};
-		default=0;
-		code = "PO3_param_player_fatigue = if(%1 > 0)then{true}else{false};";
-	};
 	class param_PO3_hud_squadlist {
 		title = $STR_PO3_PARAM_HUDGLASSES;
 		values[]={0,1};
