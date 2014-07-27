@@ -93,8 +93,8 @@ class Mission
 	randomSeed=11588837;
 	class Intel
 	{
-		briefingName="JTF2 Patrol Ops 3.1 - NATO";
-		overviewText="JTF2 modified version of Patrol Ops 3.1.";
+		briefingName="JTF2 Patrol Ops 3.1 - NATO (TFAR)";
+		overviewText="JTF2 modified version of Patrol Ops 3.1. Requires TFAR.";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
@@ -1127,7 +1127,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=203;
+		items=204;
 		class Item0
 		{
 			position[]={15201.66,17.940001,17290.037};
@@ -3070,6 +3070,14 @@ class Mission
 			id=271;
 			side="EMPTY";
 			vehicle="Land_CncBarrier_F";
+			skill=0.60000002;
+		};
+		class Item203
+		{
+			position[]={14089.466,11.239348,11553.978};
+			id=272;
+			side="EMPTY";
+			vehicle="tf_anarc164";
 			skill=0.60000002;
 		};
 	};
