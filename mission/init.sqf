@@ -12,11 +12,11 @@ if(!isDedicated) then {
 };
 
 if(!isDedicated && !PO3_debug) then {
-	playMusic "LeadTrack01a_F";
-	0 fadeMusic 1;
-	[5,""] spawn PO3_fnc_camera_fadein;
-	if!(PO3_debug) then { [270,900,150] call PO3_fnc_introsequence };
-	[] spawn { sleep 20; 8 fadeMusic 0; };
+	//playMusic "LeadTrack01a_F";
+	//0 fadeMusic 1;
+	//[5,""] spawn PO3_fnc_camera_fadein;
+	//if!(PO3_debug) then { [270,900,150] call PO3_fnc_introsequence };
+	//[] spawn { sleep 20; 8 fadeMusic 0; };
 
 //External Injury system (Future Mod Support)
 	TCB_AIS_PATH = "scripts\ais_injury\";
