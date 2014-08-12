@@ -12,7 +12,6 @@ class Mission
 		"A3_Armor_F_Slammer",
 		"A3_Armor_F_AMV",
 		"A3_Weapons_F_Ammoboxes",
-		"a3_weapons_f_gamma_ammoboxes",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Air_F_Beta_Heli_Attack_01",
@@ -45,7 +44,8 @@ class Mission
 		"A3_Structures_F_Civ_Lamps",
 		"A3_Structures_F_System",
 		"A3_Air_F_EPC_Plane_CAS_01",
-		"A3_Misc_F_Helpers"
+		"A3_Misc_F_Helpers",
+		"A3_Air_F_Gamma_UAV_02"
 	};
 	addOnsAuto[]=
 	{
@@ -59,6 +59,7 @@ class Mission
 		"A3_Armor_F_EPC_MBT_01",
 		"A3_Armor_F_AMV",
 		"A3_Weapons_F_Ammoboxes",
+		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
 		"A3_Structures_F_Mil_Helipads",
@@ -79,7 +80,6 @@ class Mission
 		"A3_Data_F",
 		"a3_roads_f",
 		"A3_Structures_F_Civ_Lamps",
-		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Structures_F_System",
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Misc_F_Helpers",
@@ -1172,12 +1172,12 @@ class Mission
 		};
 		class Item13
 		{
-			position[]={15140.237,17.91,17185.682};
+			position[]={15141.24,17.91,17185.109};
 			azimut=314.15601;
 			offsetY=0.2;
 			id=80;
 			side="EMPTY";
-			vehicle="B_Heli_Light_01_armed_F";
+			vehicle="I_Heli_light_03_F";
 			skill=0.60000002;
 			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
 		};
@@ -2163,7 +2163,7 @@ class Mission
 		};
 		class Item110
 		{
-			position[]={15282.026,17.948862,17314.154};
+			position[]={15282.349,17.943277,17313.832};
 			azimut=134.15631;
 			id=177;
 			side="EMPTY";
@@ -2223,7 +2223,7 @@ class Mission
 		};
 		class Item117
 		{
-			position[]={15290.229,17.916542,17314.383};
+			position[]={15290.551,17.909239,17314.061};
 			id=184;
 			side="EMPTY";
 			vehicle="Land_Flush_Light_yellow_F";
@@ -2231,7 +2231,7 @@ class Mission
 		};
 		class Item118
 		{
-			position[]={15281.85,17.9942,17322.348};
+			position[]={15282.172,17.993769,17322.025};
 			id=185;
 			side="EMPTY";
 			vehicle="Land_Flush_Light_yellow_F";
@@ -2239,7 +2239,7 @@ class Mission
 		};
 		class Item119
 		{
-			position[]={15273.715,18.005356,17314.016};
+			position[]={15274.037,18.004927,17313.693};
 			id=186;
 			side="EMPTY";
 			vehicle="Land_Flush_Light_yellow_F";
@@ -2247,7 +2247,7 @@ class Mission
 		};
 		class Item120
 		{
-			position[]={15282.137,17.818727,17305.984};
+			position[]={15282.459,17.804976,17305.662};
 			id=187;
 			side="EMPTY";
 			vehicle="Land_Flush_Light_yellow_F";
@@ -2719,7 +2719,7 @@ class Mission
 		};
 		class Item174
 		{
-			position[]={15272.881,18.00771,17323.834};
+			position[]={15272.89,18.007689,17323.842};
 			azimut=-45.589821;
 			id=241;
 			side="EMPTY";
