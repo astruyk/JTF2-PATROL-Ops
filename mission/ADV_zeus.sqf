@@ -1,5 +1,5 @@
 /*
-zeus script by Belbo
+ADV_zeus script by Belbo
 Makes most units placed in the editor and playable units editable by Zeus.
 Call from init.sqf via:
 if (isServer) then {[CURATORMODULENAME,true] execVM "ADV_zeus.sqf";};
@@ -8,30 +8,20 @@ if (isServer) then {[CURATORMODULENAME,true] execVM "ADV_zeus.sqf";};
 _curator = _this select 0;
 _addCivilians = _this select 1;
 
-	//adds objects placed in editor:
-{_curator addCuratorEditableObjects [[_x],true]} foreach vehicles;
-{_curator addCuratorEditableObjects [[_x],true]} foreach (allMissionObjects "Man");
-{_curator addCuratorEditableObjects [[_x],true]} foreach (allMissionObjects "Air");
-{_curator addCuratorEditableObjects [[_x],true]} foreach (allMissionObjects "Ammo");
+//adds objects placed in editor:
+_curator addCuratorEditableObjects [vehicles,true];
+_curator addCuratorEditableObjects [(allMissionObjects "Man"),false];
+_curator addCuratorEditableObjects [(allMissionObjects "Air"),true];
+_curator addCuratorEditableObjects [(allMissionObjects "Ammo"),false];
 	
-	//makes all units continuously available to Zeus (for respawning players and AI that's being spawned by a script.)
-while {true} do 
-{
+//makes all units continuously available to Zeus (for respawning players and AI that's being spawned by a script.)
+while {true} do {
+	_toAdd = if (!_addCivilians && {(side _x) == civilian}) then {false} else {true};
 	{
-		if ((side _x) == west || (side _x) == east || (side _x) == independent || (side _x) == sideEnemy) then 
-		{
-			_curator addCuratorEditableObjects [[_x],true];
-		};
+		if (_toAdd) then {_curator addCuratorEditableObjects [[_x], true]};
 	} forEach allUnits;
-	if (_addCivilians) then 
-	{
-		{
-			if ((side _x) == civilian) then 
-			{
-				_curator addCuratorEditableObjects [[_x],true];
-			}; 
-		}forEach allUnits;
-	};
-	{_curator addCuratorEditableObjects [[_x],true]} foreach vehicles;
-	sleep 5;
+	_curator addCuratorEditableObjects [vehicles, true];
+	sleep 10;
 };
+
+if (true) exitWith {};
