@@ -48,6 +48,11 @@ private["_location","_position","_locaname"];
 			PO3_TOTAL_UNITS = PO3_TOTAL_UNITS + (units _grp);
 			sleep 1;
 		};
+		
+		// Spawn a marker vehicle nearby
+		_vehPos = [position _cache, [1,10], 2, 0, 10] call PO3_fnc_getSafePos;
+		_vehType = "O_Truck_02_covered_F";
+		[_vehPos, _vehType] call PO3_fnc_createVehicle;
 	};
 	_caches call PO3_fnc_setDamageEH_C4Only;
 
