@@ -201,10 +201,19 @@ class PO3_param_enviro_title {
 	default = 0;
 	code = "";
 };
+/*
 	class param_PO3_enviro_weather {
 		title = $STR_PO3_PARAM_AMBWEATHER;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
 		default=0;
 		code = "PO3_param_ambient_weather_enable = if(%1 > 0)then{true}else{false};";
+	};
+*/
+	class param_PO3_initialCloudCover {
+		title = "Initial Cloud Cover";
+		values[]={0,0.25,0.5,0.75,1,999};
+		texts[]={"None", "Light", "Medium", "Heavy", "Max", "Random"};
+		default = 999;
+		code = "PO3_param_mission_initial_clouds = %1";
 	};
