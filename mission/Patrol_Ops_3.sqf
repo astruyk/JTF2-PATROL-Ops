@@ -79,7 +79,15 @@ sleep 1;
 if (PO3_mod_acre_enabled) then { [] execVM "scripts\Radios\PO3_setupACRE.sqf"; };
 if (PO3_mod_tfr_enabled) then { [] execVM "scripts\Radios\PO3_setupTFR.sqf"; };
 
-[PO3_param_missionhour,0] spawn PO3_fnc_setTime;
+if (PO3_param_missionhour == 999) then
+{
+	[floor (random 25), 0] spawn PO3_fnc_setTime;
+}
+else
+{
+	[PO3_param_missionhour, 0] spawn PO3_fnc_setTime;
+};
+
 
 if(PO3SRV) then {
 	[] spawn PO3_fnc_registerLocations;
