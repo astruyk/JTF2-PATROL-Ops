@@ -20,7 +20,7 @@ private["_location","_position","_locaname"];
 	PO3_TOTAL_VEHICLES = [];
 
 //	_b = 4*(PO3_TASK__DIF*3);
-	_b = ((12*(playersNumber(PO3_side_1 select 0)/40)*PO3_TASK__DIF) max 1) + 1;
+	_b = (((playersNumber(PO3_side_1 select 0)*3/10)*PO3_TASK__DIF) max 1);
 
 	_nearByBuildings = [_position,_locRadis] call PO3_fnc_getNearbyBuildings;
 
@@ -51,11 +51,11 @@ private["_location","_position","_locaname"];
 			sleep 1;
 		};
 		
-		// Spawn a second group of guards nearby
+		// Spawn another group in the buildings nearby
 		_grp = nil;
-		_grp = [position _cache, (PO3_side_3 select 0), format["EN_GroupForce_%1",round random 4], 100, "Safe"] call PO3_fnc_createGroup;
+		_grp = [position _cache, (PO3_side_3 select 0), format["EN_GroupForce_%1",round random 4], 75, "Safe"] call PO3_fnc_createGroup;
 		if !(isNil "_grp") then {
-			[ position _cache, _grp, 50] spawn PO3_fnc_groupPatrolArea;
+			[ position _cache, _grp, 75] spawn PO3_fnc_groupDefendPos;
 			PO3_TOTAL_UNITS = PO3_TOTAL_UNITS + (units _grp);
 			sleep 1;
 		};
@@ -64,6 +64,7 @@ private["_location","_position","_locaname"];
 		_vehPos = [position _cache, [1,15], 4, 0, 10] call PO3_fnc_getSafePos;
 		_vehType = PO3_cache_marker_vehicle_types call PO3_fnc_getArrayRandom;
 		[_vehPos, _vehType] call PO3_fnc_createVehicle;
+		sleep 1;
 	};
 	_caches call PO3_fnc_setDamageEH_C4Only;
 
