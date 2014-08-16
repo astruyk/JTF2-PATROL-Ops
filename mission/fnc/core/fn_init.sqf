@@ -26,7 +26,8 @@ if(isNil "PO3_param_respawn_halo_allow") then { PO3_param_respawn_halo_allow = f
 if(isNil "PO3_param_respawn_halo_time") then { PO3_param_respawn_halo_time = 0 };
 if(isNil "PO3_param_respawn_playertime") then { PO3_param_respawn_playertime = 10 };
 if(isNil "PO3_param_baseProtection") then { PO3_param_baseProtection = false };
-if(isNil "PO3_param_ambient_weather_enable") then { PO3_param_ambient_weather_enable = false };
+// if(isNil "PO3_param_ambient_weather_enable") then { PO3_param_ambient_weather_enable = false };
+if(isNil "PO3_param_mission_initial_clouds") then { PO3_param_mission_initial_clouds = 0 };
 if(isNil "PO3_param_injury_down") then { PO3_param_injury_down = false };
 if(isNil "PO3_respawn_halo_nextAvailable") then { PO3_respawn_halo_nextAvailable = 0 };
 if(isNil "PO3_param_ai_easyKill") then { PO3_param_ai_easyKill = false };
@@ -68,10 +69,10 @@ if(PO3CLI) then {
 };
 "PO3_pVAR_changeDateTime" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_changeTime; };
 "PO3_pVAR_skipDateTime" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_skipTime; };
-"PO3_pVAR_changeFog" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setFog; };
-"PO3_pVAR_changeOvercast" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setOvercast; };
-"PO3_pVAR_changeWind" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setWind; };
-"PO3_pVAR_changeRain" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setRain; };
+//"PO3_pVAR_changeFog" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setFog; };
+//"PO3_pVAR_changeOvercast" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setOvercast; };
+//"PO3_pVAR_changeWind" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setWind; };
+//"PO3_pVAR_changeRain" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setRain; };
 "PO3_pVAR_animationState" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_playActionNow; };
 "PO3_pVAR_directionState" addPublicVariableEventHandler { (_this select 1) spawn PO3_fnc_setDir; };
 "PO3_pVAR_resupplyVehicle" addPublicVariableEventHandler { _vehicle = (_this select 1) select 1; if(local _vehicle) then { _vehicle call PO3_fnc_resupplyVehicle }; };

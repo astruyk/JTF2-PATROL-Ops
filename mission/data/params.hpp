@@ -10,9 +10,9 @@ class PO3_param_missions_title {
 };
 	class param_PO3_missionhour {
 		title = "Mission Hour";
-		values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23};
-		default=12;
-		texts[]={"0000H","0100H","0200H","0300H","0400H","0500H","0600H","0700H","0800H","0900H","1000H","1100H","1200H","1300H","1400H","1500H","1600H","1700H","1800H","1900H","2000H","2100H","2200H","2300H"};
+		values[]={0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,999};
+		default=999;
+		texts[]={"0000H","0100H","0200H","0300H","0400H","0500H","0600H","0700H","0800H","0900H","1000H","1100H","1200H","1300H","1400H","1500H","1600H","1700H","1800H","1900H","2000H","2100H","2200H","2300H","Random"};
 		code = "PO3_param_missionhour = %1;";
 	};
 	class param_PO3_missioncount {
@@ -201,10 +201,19 @@ class PO3_param_enviro_title {
 	default = 0;
 	code = "";
 };
+/*
 	class param_PO3_enviro_weather {
 		title = $STR_PO3_PARAM_AMBWEATHER;
 		values[]={0,1};
 		texts[]={$STR_PO3_TEXT_NO,$STR_PO3_TEXT_YES};
 		default=0;
 		code = "PO3_param_ambient_weather_enable = if(%1 > 0)then{true}else{false};";
+	};
+*/
+	class param_PO3_initialCloudCover {
+		title = "Initial Cloud Cover";
+		values[]={0,0.25,0.5,0.75,1,999};
+		texts[]={"None", "Light", "Medium", "Heavy", "Max", "Random"};
+		default = 999;
+		code = "PO3_param_mission_initial_clouds = %1";
 	};

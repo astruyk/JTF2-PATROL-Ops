@@ -42,6 +42,8 @@ PO3_preDefinedEnemySquads = [
 	,["EN_PatrolGroup4", ["O_recon_TL_F","O_recon_JTAC_F","O_recon_F","O_recon_medic_F"]]			// Fireteam Recon 4
 	,["EN_Squad_Divers", ["O_diver_TL_F","O_diver_F","O_diver_F","O_diver_exp_F"]]					// Diver Team 0
 	,["EN_Squad_Sniper", ["O_sniper_F","O_spotter_F"]]												// Sniper Team 0
+	,["EN_Squad_Guard0", ["O_soldierU_TL_F","O_soldierU_F","O_soldierU_LAT_F","O_soldierU_F"]]		// Urban guards.
+	,["EN_Squad_Officer",["O_officer_F", "O_Soldier_lite_F", "O_Soldier_lite_F", "O_Soldier_GL_F"]] // Officer + guards
 /* AAF Forces
 	 ["EN_GroupForce_0", ["I_Soldier_TL_F","I_Soldier_GL_F","I_Soldier_AR_F","I_Soldier_AAR_F"]		// Fireteam 0
 	,["EN_GroupForce_1", ["I_Soldier_TL_F","I_Soldier_GL_F","I_Soldier_AT_F","I_Soldier_AAT_F"]		// Fireteam 1
@@ -133,6 +135,7 @@ PO3_CfgSpawner_PreDefinedVehicles = PO3_preDefinedEnemyVehicles;
 // ==== PO3 Task Specific Entities (west/east/resistance) ==================================================
 PO3_target_officer_types = ["B_officer_F","O_officer_F","I_officer_F"];
 PO3_target_cache_types = ["B_supplyCrate_F","O_supplyCrate_F","I_supplyCrate_F"];
+PO3_cache_marker_vehicle_types = ["O_Truck_02_covered_F", "O_Truck_02_transport_F", "O_Truck_03_transport_F", "O_Truck_03_covered_F", "O_MRAP_02_F"];
 PO3_target_tower_types = [ "Land_TTowerBig_2_F" , "Land_Communication_F" ];
 PO3_target_intel_types = ["Land_File1_F","Land_FilePhotos_F","Land_File2_F","Land_HandyCam_F","Land_Laptop_F","Land_Laptop_unfolded_F","Land_MobilePhone_smart_F","Land_SatellitePhone_F","Land_Photos_V2_F"];
 PO3_rescue_heliTypes = ["B_Heli_Attack_01_F","I_Heli_Transport_02_F","B_Heli_Light_01_F","B_Heli_Transport_01_F","B_Heli_Transport_01_camo_F","B_Heli_Light_01_armed_F"];

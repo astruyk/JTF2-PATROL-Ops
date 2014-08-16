@@ -19,7 +19,7 @@ if(PO3_debug) then {
 [] call PO3_fnc_init;
 [] call PO3_fnc_processParams;
 [] call PO3_fnc_taskmaster;
-[] call PO3_fnc_syncMPEnv;
+// [] call PO3_fnc_syncMPEnv;
 [] spawn PO3_fnc_cleanup;
 if(PO3SRV) then {
 	PO3_SRV_HLC_grp_recieved = nil;
@@ -79,7 +79,32 @@ sleep 1;
 if (PO3_mod_acre_enabled) then { [] execVM "scripts\Radios\PO3_setupACRE.sqf"; };
 if (PO3_mod_tfr_enabled) then { [] execVM "scripts\Radios\PO3_setupTFR.sqf"; };
 
-[PO3_param_missionhour,0] spawn PO3_fnc_setTime;
+// Set mission time.
+if (PO3_param_missionhour == 999) then
+{
+	[floor (random 25), 0] spawn PO3_fnc_setTime;
+}
+else
+{
+	[PO3_param_missionhour, 0] spawn PO3_fnc_setTime;
+};
+
+// Set mission weather. Sync'd with clients from server in newer arma versions.
+if (isServer) then
+{
+	if (PO3_param_mission_initial_clouds == 999) then
+	{
+		0 setOvercast (random 1);
+	}
+	else
+	{
+		0 setOvercast PO3_param_mission_initial_clouds;
+	};
+	// [0,0] call Po3_fnc_setOvercast;
+	// 0 setOvercast 1;
+	// 0 setRain 0; 
+	forceWeatherChange;
+};
 
 if(PO3SRV) then {
 	[] spawn PO3_fnc_registerLocations;

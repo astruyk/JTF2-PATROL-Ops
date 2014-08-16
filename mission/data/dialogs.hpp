@@ -206,7 +206,7 @@ respawnVehicleDelay = 3;
 respawnDialog	= 0;
 respawnOnStart	= 0;
 
-__EXEC(_loadscreenpicture = ["data\img_PO3flag_1.paa","data\img_PO3flag_2.paa","data\img_PO3flag_3.paa","data\img_PO3flag_4.paa"]); // <!-- BON_Inf :D
+__EXEC(_loadscreenpicture = ["data\img_po3flag_1.paa","data\img_po3flag_2.paa","data\img_po3flag_3.paa","data\img_po3flag_4.paa"]); // <!-- BON_Inf :D
 loadScreen		= __EVAL(_loadscreenpicture select round random (count _loadscreenpicture - 1));
 overviewPicture	= "\a3\Missions_F_gamma\data\img\showcase_arma_overview_ca.paa";
 overviewText	= "$STR_MISSION_DESC";
