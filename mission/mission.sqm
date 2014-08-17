@@ -1065,7 +1065,7 @@ class Mission
 						items=1;
 						class Item0
 						{
-							value="1";
+							value="2";
 							parentCls="AGM_ModuleCheckPBOs";
 							typeName="Action";
 						};
@@ -1111,7 +1111,7 @@ class Mission
 						};
 						class Item3
 						{
-							value="0";
+							value="1";
 							parentCls="AGM_ModuleMedical";
 							typeName="AllowNonmedics";
 						};
@@ -1169,7 +1169,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={15195.381,0.013830094,14850.909};
+					position[]={15195.381,0.094923303,14850.909};
 					class args
 					{
 						items=2;
