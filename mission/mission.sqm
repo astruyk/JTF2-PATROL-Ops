@@ -46,7 +46,6 @@ class Mission
 		"A3_Air_F_EPC_Plane_CAS_01",
 		"A3_Misc_F_Helpers",
 		"A3_Air_F_Gamma_UAV_02",
-		"X39_MedSys_Items",
 		"task_force_radio_items"
 	};
 	addOnsAuto[]=
@@ -86,15 +85,14 @@ class Mission
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Misc_F_Helpers",
 		"A3_Signs_F",
-		"X39_MedSys_Items",
 		"task_force_radio_items",
 		"a3_map_altis"
 	};
 	randomSeed=11588837;
 	class Intel
 	{
-		briefingName="JTF2 Patrol Ops 3.1 NATO +TFAR+XMEDX";
-		overviewText="JTF2 Patrol Ops 3.1. +TFAR+XMEDX(v.14)";
+		briefingName="JTF2 Patrol Ops 3.1 NATO +TFAR2";
+		overviewText="JTF2 Patrol Ops 3.1. +TFAR2(v.14)";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
@@ -1045,7 +1043,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=212;
+		items=208;
 		class Item0
 		{
 			position[]={15201.66,17.940001,17290.037};
@@ -2997,68 +2995,32 @@ class Mission
 		};
 		class Item204
 		{
-			position[]={15168.015,17.90402,17363.664};
-			azimut=44.935112;
+			position[]={15182.362,17.903915,17350.436};
 			id=271;
 			side="EMPTY";
-			vehicle="x39_medicBox";
+			vehicle="TF_NATO_Radio_Crate";
 			skill=0.60000002;
 		};
 		class Item205
 		{
-			position[]={15169.445,17.905525,17362.197};
-			azimut=44.935112;
+			position[]={15184.003,17.901821,17348.865};
 			id=272;
 			side="EMPTY";
-			vehicle="x39_medicBox";
+			vehicle="TF_NATO_Radio_Crate";
 			skill=0.60000002;
 		};
 		class Item206
 		{
-			position[]={15172.656,17.905338,17358.846};
-			azimut=44.935112;
+			position[]={15185.434,17.900005,17347.502};
 			id=273;
 			side="EMPTY";
-			vehicle="x39_medicBox";
+			vehicle="TF_NATO_Radio_Crate";
 			skill=0.60000002;
 		};
 		class Item207
 		{
-			position[]={15170.913,17.905205,17360.488};
-			azimut=44.935112;
-			id=274;
-			side="EMPTY";
-			vehicle="x39_medicBox";
-			skill=0.60000002;
-		};
-		class Item208
-		{
-			position[]={15182.362,17.903915,17350.436};
-			id=275;
-			side="EMPTY";
-			vehicle="TF_NATO_Radio_Crate";
-			skill=0.60000002;
-		};
-		class Item209
-		{
-			position[]={15184.003,17.901821,17348.865};
-			id=276;
-			side="EMPTY";
-			vehicle="TF_NATO_Radio_Crate";
-			skill=0.60000002;
-		};
-		class Item210
-		{
-			position[]={15185.434,17.900005,17347.502};
-			id=277;
-			side="EMPTY";
-			vehicle="TF_NATO_Radio_Crate";
-			skill=0.60000002;
-		};
-		class Item211
-		{
 			position[]={15186.794,17.895912,17345.967};
-			id=278;
+			id=274;
 			side="EMPTY";
 			vehicle="TF_NATO_Radio_Crate";
 			skill=0.60000002;
