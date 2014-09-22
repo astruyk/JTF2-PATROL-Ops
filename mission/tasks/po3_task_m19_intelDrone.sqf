@@ -88,9 +88,9 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 		_ingress = [_position ,[400,500],random 360,false] call PO3_fnc_getPos;
 
 		_vehClass = [];
-		if(_b >= 3) then { _vehClass set [count _vehClass,4]; };
+		if(_b >= 3) then { _vehClass set [count _vehClass,3]; };
 		if(_b >= 4) then { _vehClass set [count _vehClass,5]; };
-		if(_b >= 7) then { _vehClass set [count _vehClass,3]; };
+		if(_b >= 7) then { _vehClass set [count _vehClass,4]; };
 
 		for "_i" from 0 to _b do {
 			_grp = nil;
@@ -103,7 +103,7 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 		};
 
 		for "_i" from 0 to (_b min 5) do {
-			if(random 1 > 0.5 || _b >= 8) then {
+			if(random 1 > 0.75 || _b >= 9) then {
 				_class = _vehClass call PO3_fnc_getVehicleTypes;
 				if(count _class > 0) then {
 					_ingress = [_position ,[500,600],random 360,false] call PO3_fnc_getPos;
