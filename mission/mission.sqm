@@ -1174,7 +1174,7 @@ class Mission
 		{
 			position[]={15141.24,17.91,17185.109};
 			azimut=314.15601;
-			offsetY=0.2;
+			offsetY=0.050000001;
 			id=80;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
@@ -1196,6 +1196,7 @@ class Mission
 		{
 			position[]={15050.713,17.91,17074.945};
 			azimut=87.784302;
+			offsetY=0.050000001;
 			id=82;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
@@ -1206,6 +1207,7 @@ class Mission
 		{
 			position[]={15070.691,17.91,17000.326};
 			azimut=63.324699;
+			offsetY=0.050000001;
 			id=83;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_camo_F";
@@ -2273,8 +2275,9 @@ class Mission
 		};
 		class Item123
 		{
-			position[]={15133.741,17.91,17229.988};
+			position[]={15135.674,17.91,17230.756};
 			azimut=-588.45001;
+			offsetY=0.050000001;
 			id=190;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_unarmed_F";
@@ -2559,8 +2562,8 @@ class Mission
 		class Item157
 		{
 			position[]={15080.89,17.91,17146.152};
-			azimut=115.58718;
-			offsetY=0.2;
+			azimut=115.587;
+			offsetY=0.050000001;
 			id=224;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
