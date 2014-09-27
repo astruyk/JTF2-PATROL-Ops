@@ -103,7 +103,7 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 		};
 
 		for "_i" from 0 to (_b min 5) do {
-			if(random 1 > 0.75 || _b >= 9) then {
+			if(random 1 > 0.65 || _b >= 9) then {
 				_class = _vehClass call PO3_fnc_getVehicleTypes;
 				if(count _class > 0) then {
 					_ingress = [_position ,[500,600],random 360,false] call PO3_fnc_getPos;
@@ -137,7 +137,7 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 		
 		// We want a linear interpolation where for 1 player we have {1.5, 3, 6} as the values for _b, and at 32 (our max server size) we have {4, 8, 16}.
 		// This is a line where y = (5/31*(x-1)) + 3;
-		_b = (5/31 * ((playersNumber(PO3_side_1 select 0) max 1) - 1)) + 3;
+		_b = round(((5/31 * (((playersNumber(PO3_side_1 select 0) max 1) * PO3_param_missionskill) - 1)) + 3));
 
 		if( _intelpercent > 0.1 && !_fired1 ) then {
 			[_position,(_b/2)] spawn _spawnAmbush;
