@@ -40,28 +40,28 @@ _max = (count _crewtype) - 1;
 
 if( (_vehicle emptyPositions "commander") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	_unit setSkill PO3_param_ai_skill;
+	//_unit setSkill PO3_param_ai_skill;
 	_unit allowFleeing 0;
 	_unit moveinCommander _vehicle;
 };
 
 if( ( _vehicle emptyPositions "gunner") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	_unit setSkill PO3_param_ai_skill;
+	//_unit setSkill PO3_param_ai_skill;
 	_unit allowFleeing 0;
 	_unit moveinGunner _vehicle;
 };
 
 if( ( _vehicle emptyPositions "driver") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	_unit setSkill PO3_param_ai_skill;
+	//_unit setSkill PO3_param_ai_skill;
 	_unit allowFleeing 0;
 	_unit moveinDriver _vehicle;
 };
 
 if(PO3_param_ai_easyKill) then { (units _grp) spawn PO3_fnc_setDamageEH_AI; };
 
-["PO3_fnc_objectSpawner",format["Object Group %1 Created at %2 with %3 Units in a %4, Skill %5",_grp,_position,count (units _grp),_type,PO3_param_ai_skill] ] call PO3_fnc_log;
+["PO3_fnc_objectSpawner",format["Object Group %1 Created at %2 with %3 Units in a %4, Skill %5",_grp,_position,count (units _grp),_type,-1] ] call PO3_fnc_log;
 
 PO3_active_units = PO3_active_units + (units _grp) + [_vehicle];
 
