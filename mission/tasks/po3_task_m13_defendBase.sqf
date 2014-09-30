@@ -19,9 +19,9 @@ _locRadis = _location select 2;
 
 [ format["TASK%1",PO3_TASK__IDD],
 	format[localize "STR_PO3_M13_TITLE",_locaname],
-	format[ localize "STR_PO3_M13_DESCR",PO3_TASK__IDD,mapGridPosition _position,(PO3_side_3 select 2)],
+	format[localize "STR_PO3_M13_DESCR",PO3_TASK__IDD,mapGridPosition _position,(PO3_side_3 select 2)],
 	(PO3_side_1 select 0),
-	[format["MRKR%1",PO3_TASK__IDD],_position,"mil_objective",(PO3_side_1 select 0) call PO3_fnc_getUnitMarkerColour,localize "STR_PO3_M13_TITLE"],
+	[format["MRKR%1",PO3_TASK__IDD],_position,"mil_objective",(PO3_side_1 select 0) call PO3_fnc_getUnitMarkerColour, format[localize "STR_PO3_M13_TITLE", _locaname],
 	"assigned",
 	_position,
 	format[localize "STR_PO3_M13_TITLE",_locaname]

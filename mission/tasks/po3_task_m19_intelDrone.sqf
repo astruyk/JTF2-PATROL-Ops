@@ -88,9 +88,9 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 		_ingress = [_position ,[400,500],random 360,false] call PO3_fnc_getPos;
 
 		_vehClass = [];
-		if(_b >= 3) then { _vehClass set [count _vehClass,4]; };
+		if(_b >= 3) then { _vehClass set [count _vehClass,3]; };
 		if(_b >= 4) then { _vehClass set [count _vehClass,5]; };
-		if(_b >= 7) then { _vehClass set [count _vehClass,3]; };
+		if(_b >= 7) then { _vehClass set [count _vehClass,4]; };
 
 		for "_i" from 0 to _b do {
 			_grp = nil;
@@ -103,7 +103,7 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 		};
 
 		for "_i" from 0 to (_b min 5) do {
-			if(random 1 > 0.5 || _b >= 8) then {
+			if(random 1 > 0.65 || _b >= 9) then {
 				_class = _vehClass call PO3_fnc_getVehicleTypes;
 				if(count _class > 0) then {
 					_ingress = [_position ,[500,600],random 360,false] call PO3_fnc_getPos;
@@ -131,8 +131,13 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 	While{ _intelpercent < 1 && damage _crashUAV < 0.9 } do {
 		sleep 1;
 
-		_b = (6*(playersNumber(PO3_side_1 select 0)/40)*PO3_TASK__DIF) max 1;
-		_b = round(((playersNumber(PO3_side_1 select 0) max 1)*PO3_param_missionskill max 1) * abs(log(( (playersNumber(PO3_side_1 select 0) max 1)/2)/64)));
+		// Old crazy logic.
+		//_b = (6*(playersNumber(PO3_side_1 select 0)/40)*PO3_TASK__DIF) max 1;
+		//_b = round(((playersNumber(PO3_side_1 select 0) max 1)*PO3_param_missionskill max 1) * abs(log(( (playersNumber(PO3_side_1 select 0) max 1)/2)/64)));
+		
+		// We want a linear interpolation where for 1 player we have {1.5, 3, 6} as the values for _b, and at 32 (our max server size) we have {4, 8, 16}.
+		// This is a line where y = (5/31*(x-1)) + 3;
+		_b = round(((5/31 * (((playersNumber(PO3_side_1 select 0) max 1) * PO3_param_missionskill) - 1)) + 3));
 
 		if( _intelpercent > 0.1 && !_fired1 ) then {
 			[_position,(_b/2)] spawn _spawnAmbush;

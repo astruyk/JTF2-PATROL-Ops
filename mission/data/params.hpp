@@ -24,18 +24,18 @@ class PO3_param_missions_title {
 	};
 	class param_PO3_missionskill {
 		title = "Mission Difficulty";
-		values[]={1,2,4,6};
+		values[]={1,3,4,6};
 		texts[]={$STR_PO3_TEXT_LOW,$STR_PO3_TEXT_MED,$STR_PO3_TEXT_HIGH,$STR_PO3_TEXT_ULTRA};
 		default=2;
 		code = "PO3_param_missionskill = (%1/3);";
 	};
-	class param_PO3_ai_skill {
+	/*class param_PO3_ai_skill {
 		title = $STR_PO3_PARAM_SETAISKILL;
 		values[]={1,2,3,4};
 		texts[]={$STR_PO3_TEXT_LOW,$STR_PO3_TEXT_MED,$STR_PO3_TEXT_HIGH,$STR_PO3_TEXT_ULTRA};
 		default=1;
 		code = "PO3_param_ai_skill = 0.8 + log((%1)/4)";
-	};
+	};*/
 	class param_PO3_ai_Tkill {
 		title = $STR_PO3_PARAM_SETAITKILL;
 		values[]={0,1};

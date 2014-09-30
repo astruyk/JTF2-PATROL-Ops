@@ -45,7 +45,8 @@ class Mission
 		"A3_Structures_F_System",
 		"A3_Air_F_EPC_Plane_CAS_01",
 		"A3_Misc_F_Helpers",
-		"A3_Air_F_Gamma_UAV_02"
+		"A3_Air_F_Gamma_UAV_02",
+		"A3_Air_F_Beta_Heli_Transport_02"
 	};
 	addOnsAuto[]=
 	{
@@ -62,6 +63,7 @@ class Mission
 		"A3_Air_F_EPB_Heli_Light_03",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Structures_F_Mil_Helipads",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Soft_F_HEMTT",
@@ -90,7 +92,7 @@ class Mission
 	class Intel
 	{
 		briefingName="JTF2 Patrol Ops 3.1 - NATO";
-		overviewText="JTF2 modified version of Patrol Ops 3.1. (v.14)";
+		overviewText="JTF2 modified version of Patrol Ops 3.1. (v.17)";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
@@ -1161,11 +1163,11 @@ class Mission
 		};
 		class Item12
 		{
-			position[]={15182.465,17.917051,17360.287};
+			position[]={15180.877,17.913528,17357.645};
 			azimut=45.307999;
 			id=79;
 			side="EMPTY";
-			vehicle="Box_NATO_AmmoVeh_F";
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="box2";
 			init="this allowDamage false; nul0 = [this] spawn PO3_fnc_fillAmmobox;";
@@ -1179,7 +1181,7 @@ class Mission
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
 		};
 		class Item14
 		{
@@ -1190,27 +1192,29 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
 		};
 		class Item15
 		{
 			position[]={15050.713,17.91,17074.945};
 			azimut=87.784302;
+			offsetY=0.2;
 			id=82;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
 		};
 		class Item16
 		{
-			position[]={15070.691,17.91,17000.326};
-			azimut=63.324699;
+			position[]={15069.9,17.91,17000.654};
+			azimut=68.678902;
+			offsetY=0.2;
 			id=83;
 			side="EMPTY";
-			vehicle="B_Heli_Transport_01_camo_F";
+			vehicle="I_Heli_Transport_02_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper; this setObjectTexture [0, ""customSkins\EMDMH0_co.paa""]; this setObjectTexture [1, 'customSkins\EMDMH1_co.paa']; this setObjectTexture [2, 'customSkins\EMDMH2_co.paa'];";
 		};
 		class Item17
 		{
@@ -1244,22 +1248,22 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={15179.801,17.922485,17363.133};
+			position[]={15174.555,17.924166,17363.928};
 			azimut=48.1535;
 			id=87;
 			side="EMPTY";
-			vehicle="Box_NATO_AmmoVeh_F";
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="box1";
 			init="this allowDamage false; nul0 = [this] spawn PO3_fnc_fillAmmobox;";
 		};
 		class Item21
 		{
-			position[]={15185.692,17.91251,17356.881};
+			position[]={15188.867,17.905876,17350.539};
 			azimut=44.863499;
 			id=88;
 			side="EMPTY";
-			vehicle="Box_NATO_AmmoVeh_F";
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="box3";
 			init="this allowDamage false; nul0 = [this] spawn PO3_fnc_fillAmmobox;";
@@ -1298,7 +1302,7 @@ class Mission
 		};
 		class Item25
 		{
-			position[]={15190.206,17.903017,17347.055};
+			position[]={15192.675,17.902496,17344.195};
 			id=92;
 			side="EMPTY";
 			vehicle="FlagPole_F";
@@ -1371,7 +1375,7 @@ class Mission
 		class Item32
 		{
 			position[]={15071.944,17.91,17001.631};
-			azimut=63;
+			azimut=-115.04024;
 			id=99;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -1387,7 +1391,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
 		};
 		class Item34
 		{
@@ -2273,13 +2277,14 @@ class Mission
 		};
 		class Item123
 		{
-			position[]={15133.741,17.91,17229.988};
+			position[]={15138.362,17.91,17231.428};
 			azimut=-588.45001;
+			offsetY=0.2;
 			id=190;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_unarmed_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
 		};
 		class Item124
 		{
@@ -2547,19 +2552,19 @@ class Mission
 		};
 		class Item156
 		{
-			position[]={15112.206,17.91,17209.395};
+			position[]={15114.222,17.91,17206.793};
 			azimut=137.918;
 			offsetY=0.2;
 			id=223;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
 		};
 		class Item157
 		{
 			position[]={15080.89,17.91,17146.152};
-			azimut=115.58718;
+			azimut=115.587;
 			offsetY=0.2;
 			id=224;
 			side="EMPTY";

@@ -40,7 +40,6 @@ if(isNil "PO3_logistics_liftCables") then { PO3_logistics_liftCables = [] };
 if(isNil "PO3_VAR_HealingStatus") then { PO3_VAR_HealingStatus = false }; //<!-- HACK JOB
 if(isNil "PO3_playerIsBusy") then { PO3_playerIsBusy = false };
 if(isNil "ST_FTHud_assignedTeam") then { ST_FTHud_assignedTeam = { "NONE" }; };
-if(isNil "PO3_ammobox_vas_enabled") then { PO3_ammobox_vas_enabled = false; };
 if(isNil "PO3_support_ActiveUAV") then { PO3_support_ActiveUAV = objNull; };
 if(isNil "PO3_support_ActiveUGV") then { PO3_support_ActiveUGV = objNull; };
 if(isNil "PO3_param_ambient_civs_enable") then { PO3_param_ambient_civs_enable = false; };
