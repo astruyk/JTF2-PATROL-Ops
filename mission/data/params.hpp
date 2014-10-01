@@ -26,7 +26,7 @@ class PO3_param_missions_title {
 		title = "Mission Difficulty";
 		values[]={1,3,4,6};
 		texts[]={$STR_PO3_TEXT_LOW,$STR_PO3_TEXT_MED,$STR_PO3_TEXT_HIGH,$STR_PO3_TEXT_ULTRA};
-		default=2;
+		default=3;
 		code = "PO3_param_missionskill = (%1/3);";
 	};
 	class param_PO3_ai_skill {
