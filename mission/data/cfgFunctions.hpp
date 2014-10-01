@@ -194,6 +194,7 @@
 			class supportCreateHeloReinforcements;
 			class supportCreateUAV;
 			class supportCreateUGV;
+			class setUnitSkill;
 		};
 		class Position {
 			file = "fnc\position";

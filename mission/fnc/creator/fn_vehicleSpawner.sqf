@@ -57,21 +57,21 @@ _grp = createGroup _side;
 
 if( (_vehicle emptyPositions "commander") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	//_unit setSkill PO3_param_ai_skill;
+	[_unit] call PO3_fnc_setUnitSkill;
 	_unit allowFleeing 0;
 	_unit moveinCommander _vehicle;
 };
 
 if( ( _vehicle emptyPositions "gunner") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	//_unit setSkill PO3_param_ai_skill;
+	[_unit] call PO3_fnc_setUnitSkill;
 	_unit allowFleeing 0;
 	_unit moveinGunner _vehicle;
 };
 
 if( ( _vehicle emptyPositions "driver") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	//_unit setSkill PO3_param_ai_skill;
+	[_unit] call PO3_fnc_setUnitSkill;
 	_unit allowFleeing 0;
 	_unit moveinDriver _vehicle;
 };
@@ -85,7 +85,7 @@ if( count _fillCargo > 0 ) then {
 	{
 		if !(( _vehicle emptyPositions "cargo") > 0) exitWith { [format[true,"HINTS","%1 is full and cannot hold any more infantry!",_vehicle]] call PO3_fnc_hint };
 		_unit = _grp createUnit [_fillCargo select _ForEachIndex, _position, [], _radius, "NONE"];
-		//_unit setSkill PO3_param_ai_skill;
+		[_unit] call PO3_fnc_setUnitSkill;
 		_unit allowFleeing 0;
 		_unit moveInCargo _vehicle;
 	}forEach _fillCargo;

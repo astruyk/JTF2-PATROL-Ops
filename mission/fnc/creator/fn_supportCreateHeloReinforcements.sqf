@@ -21,7 +21,7 @@ if( count _cargo > 0 ) then {
 	{
 		if !(( _chopper emptyPositions "cargo") > 0) exitWith { [format[true,"HINTS","%1 is full and cannot hold any more infantry!",_chopper]] call PO3_fnc_hint };
 		_unit = _cargogrp createUnit [_cargo select _ForEachIndex, _posInfill, [], 0, "NONE"];
-		//_unit setSkill PO3_param_ai_skill;
+		[_unit] call PO3_fnc_setUnitSkill;
 		_unit allowFleeing 0;
 		_unit assignAsCargo _chopper;
 		_unit moveInCargo _chopper;

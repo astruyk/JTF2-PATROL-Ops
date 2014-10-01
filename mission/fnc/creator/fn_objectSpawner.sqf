@@ -40,21 +40,21 @@ _max = (count _crewtype) - 1;
 
 if( (_vehicle emptyPositions "commander") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	//_unit setSkill PO3_param_ai_skill;
+	[_unit] call PO3_fnc_setUnitSkill;
 	_unit allowFleeing 0;
 	_unit moveinCommander _vehicle;
 };
 
 if( ( _vehicle emptyPositions "gunner") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	//_unit setSkill PO3_param_ai_skill;
+	[_unit] call PO3_fnc_setUnitSkill;
 	_unit allowFleeing 0;
 	_unit moveinGunner _vehicle;
 };
 
 if( ( _vehicle emptyPositions "driver") > 0 ) then {
 	_unit = _grp createUnit [_crewtype select (round random _max), _position, [], _radius, "NONE"];
-	//_unit setSkill PO3_param_ai_skill;
+	[_unit] call PO3_fnc_setUnitSkill;
 	_unit allowFleeing 0;
 	_unit moveinDriver _vehicle;
 };
