@@ -38,7 +38,8 @@ while {alive _cache} do {
 	{
 		_cache addMagazineCargo [_x, 3];
 	} forEach _resupplyMagazines;
-	
+	_cache addWeaponCargo ["MineDetector", 1];
+
 	// Remove all the virtual things from the box
 	[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call BIS_fnc_removeVirtualBackpackCargo;
 	[_cache, ([_cache] call BIS_fnc_getVirtualItemCargo)] call BIS_fnc_removeVirtualItemCargo;
