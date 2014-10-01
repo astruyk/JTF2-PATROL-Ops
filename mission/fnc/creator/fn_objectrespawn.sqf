@@ -40,6 +40,7 @@ waitUntil {
 			_isLCH = _vehicle getVariable ["PO3_liftchopper",nil];
 			_isLFT = _vehicle getVariable ["PO3_liftable",nil];
 			_isRSP = _vehicle getVariable ["PO3_resupply",nil];
+			_customTextures = _vehicle getVariable ["PO3_customObjectTextures", nil];
 
 			// MHQ can not be abandoned
 			if(!isNil "_isMHQ") then { _abandoned = false };
@@ -63,6 +64,12 @@ waitUntil {
 					if(!isNil "_isLCH") then { _vehicle setVariable ["PO3_liftchopper",_isLCH,true] };
 					if(!isNil "_isLFT") then { _vehicle setVariable ["PO3_liftable",_isLFT,true] };
 					if(!isNil "_isRSP") then { _vehicle setVariable ["PO3_resupply",_isRSP,true] };
+					if (!isNil "_customTextures") then
+					{
+						{
+							_vehicle setObjectTexture [_forEachIndex, _x];
+						} forEach _customTextures;
+					};
 				};
 			};
 
