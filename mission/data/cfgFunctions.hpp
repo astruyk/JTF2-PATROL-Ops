@@ -195,6 +195,7 @@
 			class supportCreateUAV;
 			class supportCreateUGV;
 			class setUnitSkill;
+			class logUnitSkill;
 		};
 		class Position {
 			file = "fnc\position";
