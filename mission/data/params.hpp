@@ -31,7 +31,7 @@ class PO3_param_missions_title {
 	};
 	class param_PO3_ai_skill {
 		title = $STR_PO3_PARAM_SETAISKILL;
-		values[]={1,2,3,4};
+		values[]={1,2,3,4,99};
 		texts[]={$STR_PO3_TEXT_LOW,$STR_PO3_TEXT_MED,$STR_PO3_TEXT_HIGH,$STR_PO3_TEXT_ULTRA,"ASR_AI3 Settings"};
 		default=99;
 		code = "PO3_param_ai_skill = if(%1<99)then{0.8 + log((%1)/4)}else{-1};";
