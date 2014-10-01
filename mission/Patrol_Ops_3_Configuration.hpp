@@ -440,6 +440,7 @@ PO3_CfgLogistics_UnitLoadoutBlacklist = [
 // Vehicle CAPACITY that can TOW, LIFT or LOAD
 PO3_CfgLogistics_Loadable = [
 	 ["Cargo_base_F",15200]
+	,["I_Heli_Transport_02_F", 64000] //Make the mowhawk able to lift tanks. Needs to be listed before base class.
 	,["B_Truck_01_mover_F",0]
 	,["B_Truck_01_transport_F",64000]
 	,["O_Truck_02_transport_F",64000]
