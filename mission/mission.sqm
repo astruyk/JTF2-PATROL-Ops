@@ -1287,14 +1287,14 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={15169.445,17.882185,17344.691};
-			azimut=139.23399;
+			position[]={15069.732,17.91,17000.59};
+			azimut=68.255295;
 			offsetY=0.2;
 			id=84;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			skill=0.60000002;
-			init="PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper; this setObjectTexture [0, ""customSkins\CH148_0.paa""]; this setObjectTexture [1, ""customSkins\CH148_1.paa""]; this setObjectTexture [2, ""customSkins\CH148_2.paa""];";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper; this setVariable [""PO3_customObjectTextures"", [""customSkins\CH148_0.paa"",""customSkins\CH148_1.paa"",""customSkins\CH148_2.paa""]]; this setObjectTexture [0, ""customSkins\CH148_0.paa""]; this setObjectTexture [1, ""customSkins\CH148_1.paa""]; this setObjectTexture [2, ""customSkins\CH148_2.paa""];";
 		};
 		class Item17
 		{
@@ -1454,8 +1454,8 @@ class Mission
 		};
 		class Item32
 		{
-			position[]={15071.944,17.91,17001.631};
-			azimut=-115.04024;
+			position[]={15071.944,17.91,17001.432};
+			azimut=-114.13563;
 			id=100;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
