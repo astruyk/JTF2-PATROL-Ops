@@ -32,6 +32,16 @@ while {alive _cache} do {
 //	{ _cache addBackpackCargo [_x, 1]; } foreach (_data select 3);
 //	{ _cache addItemCargo [_x, 1]; } foreach (_data select 4);
 //	{ _cache addItemCargo [_x, 1]; } foreach (_data select 5);
+
+	// Add some stuff that everone has access to in the general inventory for resupply.
+	_cache addMagazineCargo ["NLAW_F", 3];
+	_cache addMagazineCargo ["Titan_AT", 3];
+	_cache addMagazineCargo ["Titan_AP", 3];
+	_cache addMagazineCargo ["Titan_AA", 3];
+	_cache addMagazineCargo ["200Rnd_65x39_cased_Box", 3];
+	_cache addMagazineCargo ["200Rnd_65x39_cased_Box_Tracer", 3];
+	_cache addMagazineCargo ["100Rnd_65x39_caseless_mag_Tracer", 3];
+	_cache addMagazineCargo ["100Rnd_65x39_caseless_mag", 3];
 	
 	// Remove all the virtual things from the box
 	[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call BIS_fnc_removeVirtualBackpackCargo;
