@@ -1287,14 +1287,14 @@ class Mission
 		};
 		class Item16
 		{
-			position[]={15069.9,17.91,17000.654};
-			azimut=68.678902;
+			position[]={15169.445,17.882185,17344.691};
+			azimut=139.23399;
 			offsetY=0.2;
 			id=84;
 			side="EMPTY";
 			vehicle="I_Heli_Transport_02_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper;";
+			init="PO3_fnc_setObjectRespawn; _nul1 = [this] call PO3_fnc_setAsLiftChopper; this setObjectTexture [0, ""customSkins\CH148_0.paa""]; this setObjectTexture [1, ""customSkins\CH148_1.paa""]; this setObjectTexture [2, ""customSkins\CH148_2.paa""];";
 		};
 		class Item17
 		{
