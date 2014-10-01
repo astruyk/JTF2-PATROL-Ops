@@ -34,14 +34,10 @@ while {alive _cache} do {
 //	{ _cache addItemCargo [_x, 1]; } foreach (_data select 5);
 
 	// Add some stuff that everone has access to in the general inventory for resupply.
-	_cache addMagazineCargo ["NLAW_F", 3];
-	_cache addMagazineCargo ["Titan_AT", 3];
-	_cache addMagazineCargo ["Titan_AP", 3];
-	_cache addMagazineCargo ["Titan_AA", 3];
-	_cache addMagazineCargo ["200Rnd_65x39_cased_Box", 3];
-	_cache addMagazineCargo ["200Rnd_65x39_cased_Box_Tracer", 3];
-	_cache addMagazineCargo ["100Rnd_65x39_caseless_mag_Tracer", 3];
-	_cache addMagazineCargo ["100Rnd_65x39_caseless_mag", 3];
+	_resupplyMagazines = ["NLAW_F", "Titan_AT", "Titan_AP", "Titan_AA", "200Rnd_65x39_cased_Box", "200Rnd_65x39_cased_Box_Tracer", "100Rnd_65x39_caseless_mag_Tracer", "100Rnd_65x39_caseless_mag"];
+	{
+		_cache addMagazineCargo [_x, 3];
+	} forEach _resupplyMagazines;
 	
 	// Remove all the virtual things from the box
 	[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call BIS_fnc_removeVirtualBackpackCargo;
@@ -51,7 +47,7 @@ while {alive _cache} do {
 	
 	// Add all of the new virtual items we want in the box.
 	[_cache, _data select 0] call BIS_fnc_addVirtualWeaponCargo;
-	[_cache, _data select 1] call BIS_fnc_addVirtualMagazineCargo;
+	[_cache, (_data select 1) + _resupplyMagazines] call BIS_fnc_addVirtualMagazineCargo;
 	[_cache, _data select 2] call BIS_fnc_addVirtualItemCargo;
 	[_cache, _data select 3] call BIS_fnc_addVirtualBackpackCargo;
 	[_cache, _data select 4] call BIS_fnc_addVirtualItemCargo;
