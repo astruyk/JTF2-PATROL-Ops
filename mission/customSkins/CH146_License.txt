@@ -1,0 +1,5 @@
+Copyright (c) 2013 by Anton Struyk.
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To veiw a copy of this licence, visit http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+This work is based off a template by sykoCrazy. Original found here: http://forums.bistudio.com/showthread.php?171316-Hellcat-PSD-Template
