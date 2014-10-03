@@ -5,6 +5,8 @@ _data = [];
 
 waitUntil {!isNull player};
 
+//_cache setVariable ["PO3_VAS",true,false];
+
 player reveal _cache;
 
 while {alive _cache} do {

@@ -16,7 +16,7 @@ _objects= _this;
 if(typeName _objects != typeName []) then { _objects = [_objects] };
 
 {
-	//_x setVariable ["PO3_VAS",true,isServer];
+	_x setVariable ["PO3_VAS",true,isServer];
 }forEach _objects;
 
 true;
