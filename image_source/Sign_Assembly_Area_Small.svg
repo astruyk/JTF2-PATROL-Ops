@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="256"
+   height="256"
+   id="svg3952"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   sodipodi:docname="Assembly_Area.svg"
+   inkscape:export-filename="C:\Users\Anton\Dropbox\Assembly_Area_C.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3954" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.5590531"
+     inkscape:cx="118.79681"
+     inkscape:cy="67.253338"
+     inkscape:current-layer="layer3"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="988"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3957">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(0,192)">
+    <rect
+       style="fill:#dfefb0;fill-opacity:1;stroke:none"
+       id="rect4500"
+       width="188.36368"
+       height="251.63634"
+       x="33.818161"
+       y="-189.81818"
+       rx="6.909091"
+       ry="6.5454545" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Working">
+    <rect
+       style="fill:#dfefb0;fill-opacity:1;stroke:#126449;stroke-width:5.9000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4492"
+       width="176.36368"
+       height="241.09088"
+       x="39.818161"
+       y="7.4545593"
+       rx="6.909091"
+       ry="6.5454545" />
+    <text
+       xml:space="preserve"
+       style="font-size:29.67109299px;font-style:normal;font-weight:bold;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#126449;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="128"
+       y="56.480274"
+       id="text3972"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="127.08"
+         y="56.480274"
+         id="tspan3976"
+         dx="0"
+         style="font-style:normal;font-weight:bold;letter-spacing:-1.84000015px;-inkscape-font-specification:Sans Bold">ASSEMBLY</tspan><tspan
+         sodipodi:role="line"
+         x="127.08"
+         y="93.569138"
+         id="tspan3978"
+         style="font-style:normal;font-weight:bold;letter-spacing:-1.84000015px;-inkscape-font-specification:Sans Bold">AREA</tspan></text>
+    <rect
+       style="fill:#126449;fill-opacity:1;stroke:none"
+       id="rect4494"
+       width="126.90919"
+       height="117.45454"
+       x="64.54541"
+       y="116.72728"
+       rx="6.909091"
+       ry="6.5454545" />
+    <text
+       xml:space="preserve"
+       style="font-size:106.8977356px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#dfefb0;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Bold"
+       x="84.810936"
+       y="218.49681"
+       id="text4496"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4498"
+         x="84.810936"
+         y="218.49681"
+         style="font-size:120.25995636px">C</tspan></text>
+  </g>
+</svg>
