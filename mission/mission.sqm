@@ -961,19 +961,19 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="AA_4";
-					init="this allowDamage false; (group driver this) setGroupID [""AA-BTRY Coast""]; driver this disableAI ""MOVE""; this addEventHandler [""fired"", ""AA_4 setVehicleAmmo 1""]; leader(driver this) setVariable [""PO3_hideGroup"",true];";
+					init="this allowDamage false; (group driver this) setGroupID [""AA-BTRY Coast""]; driver this disableAI ""MOVE""; this addEventHandler [""fired"", ""AA_4 setVehicleAmmo 1""]; leader(driver this) setVariable [""PO3_hideGroup"",true]; this setVariable [""ADV_Zeus_Ignore"", true];";
 				};
 				class Item1
 				{
 					position[]={15259.345,19.185308,17100.518};
-					azimut=-386.0593;
+					azimut=-386.05899;
 					special="NONE";
 					id=64;
 					side="WEST";
 					vehicle="B_APC_Tracked_01_AA_F";
 					skill=0.60000002;
 					text="AA_5";
-					init="this allowDamage false; (group driver this) setGroupID [""AA-BTRY Coast""]; driver this disableAI ""MOVE""; this addEventHandler [""fired"", ""AA_5 setVehicleAmmo 1""];";
+					init="this allowDamage false; (group driver this) setGroupID [""AA-BTRY Coast""]; driver this disableAI ""MOVE""; this addEventHandler [""fired"", ""AA_5 setVehicleAmmo 1""]; this setVariable [""ADV_Zeus_Ignore"", true];";
 				};
 				class Item2
 				{
@@ -985,7 +985,7 @@ class Mission
 					vehicle="B_APC_Tracked_01_AA_F";
 					skill=0.60000002;
 					text="AA_6";
-					init="this allowDamage false; (group driver this) setGroupID [""AA-BTRY Coast""]; driver this disableAI ""MOVE""; this addEventHandler [""fired"", ""AA_6 setVehicleAmmo 1""];";
+					init="this allowDamage false; (group driver this) setGroupID [""AA-BTRY Coast""]; driver this disableAI ""MOVE""; this addEventHandler [""fired"", ""AA_6 setVehicleAmmo 1""]; this setVariable [""ADV_Zeus_Ignore"", true];";
 				};
 			};
 		};
@@ -1593,7 +1593,7 @@ class Mission
 		class Item51
 		{
 			position[]={15200.083,17.932209,17356.404};
-			azimut=50.129738;
+			azimut=50.1297;
 			id=119;
 			side="EMPTY";
 			vehicle="CamoNet_BLUFOR_open_F";
@@ -1602,23 +1602,25 @@ class Mission
 		class Item52
 		{
 			position[]={15198.538,17.929436,17359.262};
-			azimut=-13.455589;
+			azimut=-13.4556;
 			id=120;
 			side="EMPTY";
 			vehicle="MapBoard_altis_F";
 			leader=1;
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item53
 		{
 			position[]={15200.57,17.934856,17357.807};
-			azimut=233.81189;
+			azimut=233.812;
 			id=121;
 			side="EMPTY";
 			vehicle="Land_TableDesk_F";
 			leader=1;
 			skill=0.60000002;
 			text="table";
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item54
 		{
@@ -1629,7 +1631,7 @@ class Mission
 			vehicle="Land_Laptop_unfolded_F";
 			leader=1;
 			skill=0.60000002;
-			init="this attachTo [table, [0,0,0.55]];";
+			init="this attachTo [table, [0,0,0.55]]; this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item55
 		{
@@ -2402,6 +2404,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item138
 		{
@@ -2410,6 +2413,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item139
 		{
@@ -2418,6 +2422,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item140
 		{
@@ -2426,6 +2431,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item141
 		{
@@ -2434,6 +2440,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item142
 		{
@@ -2442,6 +2449,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item143
 		{
@@ -2450,6 +2458,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item144
 		{
@@ -2458,6 +2467,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item145
 		{
@@ -2466,6 +2476,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item146
 		{
@@ -2474,6 +2485,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item147
 		{
@@ -2482,6 +2494,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_ClutterCutter_large_F";
 			skill=0.60000002;
+			init="this setVariable [""ADV_Zeus_Ignore"", true];";
 		};
 		class Item148
 		{
