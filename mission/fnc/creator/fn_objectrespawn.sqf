@@ -67,7 +67,7 @@ waitUntil {
 					if (!isNil "_customTextures") then
 					{
 						{
-							_vehicle setObjectTexture [_forEachIndex, _x];
+							_vehicle setObjectTextureGlobal [_forEachIndex, _x];
 						} forEach _customTextures;
 					};
 				};
