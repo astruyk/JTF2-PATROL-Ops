@@ -26,15 +26,15 @@ PO3_preDefinedEnemySquads = [
 */
 /* CSAT Forces */
 	 ["EN_GroupForce_0", ["O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AR_F","O_Soldier_AAR_F"]]	// Fireteam 0
-	,["EN_GroupForce_1", ["O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AT_F","O_Soldier_AAT_F"]]	// Fireteam 1
-	,["EN_GroupForce_2", ["O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AT_F","O_Soldier_LAT_F"]]	// Fireteam 2
+	,["EN_GroupForce_1", ["O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_LAT_F","O_soldierU_M_F"]]	// Fireteam 1
+	,["EN_GroupForce_2", ["O_Soldier_TL_F","O_Soldier_GL_F","O_Soldier_AT_F","O_Soldier_AAT_F"]]	// Fireteam 2
 	,["EN_GroupForce_3", ["O_Soldier_TL_F","O_Soldier_GL_F","O_G_Soldier_lite_F","O_soldierU_medic_F"]]	// Fireteam 3
 	,["EN_GroupForce_4", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AR_F","O_Soldier_AAR_F"]]		// Fireteam 4
 	,["EN_GroupForce_5", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_LAT_F","O_Soldier_F"]]			// Fireteam 5
-	,["EN_GroupForce_6", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_AT_F","O_soldier_exp_F"]]		// Fireteam 6
+	,["EN_GroupForce_6", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_LAT_F","O_soldier_exp_F"]]		// Fireteam 6
 	,["EN_GroupForce_7", ["O_Soldier_TL_F","O_Soldier_F","O_G_Soldier_lite_F","O_Soldier_LAT_F"]]	// Fireteam 7
 	,["EN_GroupForce_8", ["O_Soldier_TL_F","O_Soldier_F","O_soldierU_AA_F","O_Soldier_A_F"]]			// Fireteam 8
-	,["EN_GroupForce_9", ["O_Soldier_TL_F","O_Soldier_F","O_Soldier_A_F","O_Soldier_LAT_F"]]		// Fireteam 9
+	,["EN_GroupForce_9", ["O_Soldier_TL_F","O_Soldier_F","O_soldierU_M_F","O_Soldier_LAT_F"]]		// Fireteam 9
 	,["EN_PatrolGroup0", ["O_recon_TL_F","O_recon_F","O_recon_LAT_F","O_recon_M_F"]]				// Fireteam Recon 0
 	,["EN_PatrolGroup1", ["O_recon_TL_F","O_recon_F","O_recon_LAT_F","O_recon_medic_F"]]			// Fireteam Recon 1
 	,["EN_PatrolGroup2", ["O_recon_TL_F","O_recon_JTAC_F","O_recon_M_F","O_recon_exp_F"]]			// Fireteam Recon 2
@@ -429,7 +429,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 ];
 
 PO3_CfgLogistics_UnitLoadoutBlacklist = [
-	 "optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS"
+	 "optic_Nightstalker","optic_tws","optic_tws_mg"
 	,"G_Lady_Blue","G_Lady_Dark","G_Lady_Mirror","G_Lady_Red","G_Shades_Green"
 	,"G_Spectacles","G_Spectacles_Tinted"
 	,"G_Sport_Blackred","G_Sport_BlackWhite","G_Sport_Blackyellow","G_Sport_Checkered"
