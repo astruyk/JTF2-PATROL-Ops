@@ -374,9 +374,9 @@ PO3_CfgLogistics_UnitLoadouts = [
 	],
 	["Support"
 		,[/*Weapons*/
-				"MineDetector","arifle_SDAR_F"
+				"MineDetector"
 			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MX_GL_Black_F","arifle_MX_F","arifle_MX_GL_F","SMG_01_F"
+				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_GL_F","arifle_MXC_F","SMG_01_F", "SMG_02_F", "hgun_PDW2000_F"
 				,"launch_NLAW_F"
 			/*CSAT*/
 		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","SMG_02_F"
