@@ -33,7 +33,7 @@ waitUntil {
 
 			// Check if Vehicle Abandoned
 			_empty = if({alive _vehicle} count (crew _vehicle) == 0 && _pos distance (_vehicle call PO3_fnc_getPos) > 10 ) then { _empty }else{ time };
-			_empty = if(isNull (_vehicle getVariable ["PO3_lifted", objNull])) then { _empty } else { time }; //If a vehicle is being lifted it doesn't count as being abandoned
+			_empty = if([_vehicle] call PO3_fnc_isLifted) then { time } else { _empty }; //If a vehicle is being lifted it doesn't count as being abandoned
 			_abandoned = if( time - _empty > _timeA ) then { true }else{ false };
 
 			// Get PO3 Variables
