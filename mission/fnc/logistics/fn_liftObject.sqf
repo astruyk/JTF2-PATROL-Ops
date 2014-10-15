@@ -9,7 +9,7 @@ PO3_logistics_lifthook_active = false;
 
 _attachPointLifter = [_lifter,"BASE"] call PO3_fnc_getAttachPoint;
 _attachPointObject = [_object,"TOP"] call PO3_fnc_getAttachPoint;
-_offset = [0,0,(- 4) max (( (_attachPointLifter select 2) - (_attachPointObject select 2) ) min 10)];
+_offset = [0,0,(-4) min ((_attachPointLifter select 2) - (_attachPointObject select 2))];
 
 //Make Vehicle Local
 if!(local _object) then {
