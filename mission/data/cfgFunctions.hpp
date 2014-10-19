@@ -366,11 +366,3 @@
 			class checklauncher;
 		};
 	};
-	
-	class JTF2{
-		tag = "JTF2";
-		class root {
-			file = "scripts\JTF2";
-			class SetupSign;
-		};
-	};
