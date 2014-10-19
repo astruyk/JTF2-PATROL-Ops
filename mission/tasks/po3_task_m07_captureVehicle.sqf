@@ -35,6 +35,9 @@ _spawnPos = [_position,50,-1,0] call PO3_fnc_getSafePos;
 _targetclass = [0,1,3,6] call PO3_fnc_getVehicleTypes;
 _target = [ _spawnPos, _targetclass call PO3_fnc_getArrayRandom, random 360, 0 ] call PO3_fnc_createVehicle;
 
+// Trick ASR_AI3 into thinking that it has already attempted to man the vehicle a number of times. Prevents it from being manned by AI.
+_target setVariable ["asr_ai3_mountcount", 999, true];
+
 // =========================================================================================================
 //	Create Hostiles
 // =========================================================================================================
