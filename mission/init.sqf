@@ -5,6 +5,29 @@ if (isServer) then { [zeusModule,true] execVM "ADV_zeus.sqf"; };
 [] execVM "Patrol_Ops_3.sqf";
 [] execVM "jtf2\scripts\InitDynamicVehicles.sqf";
 
+// Define custom map objects for Ares to spawn.
+[
+	[
+		"CH-146 Griffon Helicopter (Empty)",
+		{
+			_vehicle = "I_Heli_light_03_F" createVehicle (_this select 0);
+			[_vehicle] call PO3_fnc_setAsLiftChopper;
+			_vehicle setObjectTextureGlobal [0, "customSkins\CH146_0.paa"];
+			_vehicle;
+		}
+	],
+	[
+		"CH-148 Cyclone Helicopter (Empty)",
+		{
+			_vehicle = "I_Heli_Transport_02_F" createVehicle (_this select 0);
+			[_vehicle] call PO3_fnc_setAsLiftChopper;
+			_vehicle setObjectTextureGlobal [0, "customSkins\CH148_0.paa"];
+			_vehicle setObjectTextureGlobal [1, "customSkins\CH148_1.paa"];
+			_vehicle setObjectTextureGlobal [2, "customSkins\CH148_2.paa"];
+			_vehicle;
+		}
+	]
+] execVM "Ares_CreateCustomMissionObject.sqf";
 
 if(!isDedicated) then {
 	Receiving_finish = false;
