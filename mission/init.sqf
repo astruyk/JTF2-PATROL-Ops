@@ -5,14 +5,28 @@ if (isServer) then { [zeusModule,true] execVM "ADV_zeus.sqf"; };
 [] execVM "Patrol_Ops_3.sqf";
 [] execVM "jtf2\scripts\InitDynamicVehicles.sqf";
 
+// Define a function we can use to setup a chopper as a lift chopper and
+// assign a custom skin locally.
+JTF2_SetupCustomChopper =
+{
+	_vehicle = _this select 0;
+	_skins = _this select 1;
+	if (!isServer || !isDedicated) then
+	{
+		[_vehicle] call PO3_fnc_setAsLiftChopper;
+		{
+			_vehicle setObjectTexture [_forEachIndex, _x];
+		} forEach _skins;
+	};
+};
+
 // Define custom map objects for Ares to spawn.
 [
 	[
 		"CH-146 Griffon Helicopter (Empty)",
 		{
 			_vehicle = "I_Heli_light_03_F" createVehicle (_this select 0);
-			[_vehicle] call PO3_fnc_setAsLiftChopper;
-			_vehicle setObjectTextureGlobal [0, "customSkins\CH146_0.paa"];
+			[[_vehicle, ["customSkins\CH146_0.paa"]], "JTF2_SetupCustomChopper", true, true] call BIS_fnc_MP;
 			_vehicle;
 		}
 	],
@@ -20,10 +34,7 @@ if (isServer) then { [zeusModule,true] execVM "ADV_zeus.sqf"; };
 		"CH-148 Cyclone Helicopter (Empty)",
 		{
 			_vehicle = "I_Heli_Transport_02_F" createVehicle (_this select 0);
-			[_vehicle] call PO3_fnc_setAsLiftChopper;
-			_vehicle setObjectTextureGlobal [0, "customSkins\CH148_0.paa"];
-			_vehicle setObjectTextureGlobal [1, "customSkins\CH148_1.paa"];
-			_vehicle setObjectTextureGlobal [2, "customSkins\CH148_2.paa"];
+			[[_vehicle, ["customSkins\CH148_0.paa", "customSkins\CH148_1.paa", "customSkins\CH148_2.paa"]], "JTF2_SetupCustomChopper", true, true] call BIS_fnc_MP;
 			_vehicle;
 		}
 	]
