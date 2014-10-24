@@ -1,4 +1,5 @@
-Copyright (c) 2013 by Anton Struyk. This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License. 
-To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.] 
+Copyright (c) 2013 by Anton Struyk.
 
-This work is based on content by Zalimba Copyright (c) 2013 licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License. Source: http://www.armaholic.com/page.php?id=25921
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To veiw a copy of this licence, visit http://creativecommons.org/licenses/by-nc-sa/4.0/ or send a letter to Creative Commons, 444 Castro Street, Suite 900, Mountain View, California, 94041, USA.
+
+This work is based on content by EMD Copyright (c) 2013 licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License. Source: http://www.armaholic.com/page.php?id=25921
