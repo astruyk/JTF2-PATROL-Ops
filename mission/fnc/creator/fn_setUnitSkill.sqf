@@ -21,7 +21,7 @@ if(isNil "PO3_param_ai_skill") then { PO3_param_ai_skill = 0.67 }; // Just in ca
 		// TODO I don't actually think this is necessary since ASR_AI3 seems to be setting
 		// the AI skill locally anyways. We just don't want to overwrite it with the
 		// PO3 values...
-		[_unit] call asr_ai3_sysaiskill_fnc_setUnitSkill;
+		// [_unit] call asr_ai3_sysaiskill_fnc_setUnitSkill;
 	}
 	else
 	{
