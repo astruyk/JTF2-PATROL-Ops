@@ -13,7 +13,6 @@ JTF2_SetupCustomChopper =
 	_skins = _this select 1;
 	if (!isServer || !isDedicated) then
 	{
-		[_vehicle] call PO3_fnc_setAsLiftChopper;
 		{
 			_vehicle setObjectTexture [_forEachIndex, _x];
 		} forEach _skins;
