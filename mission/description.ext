@@ -9,6 +9,7 @@ enableDebugConsole	= 1;		// <!-- Enable the debug console where (0=disabled),(1=
 showGPS			= 1;			// <!-- Allow GPS
 showCompass		= 1;			// <!-- Allow Compass
 showWatch		= 1;			// <!-- Allow Watch
+forceRotorLibSimulation = 1; // Fun helicopters!
 
 class Header {
 	maxPlayers = 32;	// <!-- CHANGE Where the number is the total playable slots
