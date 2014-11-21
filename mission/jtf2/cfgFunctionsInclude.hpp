@@ -6,7 +6,6 @@ class JTF2
 		file = "jtf2\functions";
 		class GetMarkerNameForSide;
 		class PositionBase;
-		class enableLaserGuide;
 		class initVehicleForLaserGuide;
 		class SetupSign;
 	};
