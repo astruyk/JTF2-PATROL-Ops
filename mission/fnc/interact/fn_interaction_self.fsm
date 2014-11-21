@@ -227,18 +227,10 @@ class FSM
        "" \n
        "_vehicle call PO3_fnc_setFiredEH;" \n
        "[_vehicle] call PO3_fnc_displayLogisticsFeatures;" \n
-       "if([_vehicle,""Loadable""] call PO3_fnc_getCfgPO3) then { [_vehicle] call PO3_fnc_setAsLiftChopper };" \n
-       "" \n
        "_action = _vehicle addAction [format[""<t color='#ffc600'><img image='\A3\ui_f\data\gui\rsc\rscdisplayarcademap\icon_debug_ca.paa' size='0.7' /> ""+localize ""STR_PO3_VEHRSUP_ACTION""+""</t>"",_descr],{(vehicle player) spawn PO3_fnc_resupplyVehicle;},[],-100,false,true,"""",""({ _x getVariable ['PO3_resupply',false] && _x != _target } count (nearestObjects [_target,['ALL'],15]) > 0) && driver _target == player && isTouchingGround _target""];" \n
        "_self_actions set [count _self_actions, _action];" \n
        "" \n
        "if(_vehicle getVariable [""PO3_liftchopper"",false]) then {" \n
-       "	_action = _vehicle addAction [format[""<t color='#ffc600'>""+localize ""STR_PO3_ACTION_LIFTHOOKA""+""</t>""],{ [(vehicle player),true] spawn PO3_fnc_liftCamera; },[],-100,false,true,"""",""!PO3_logistics_lifthook_active && driver _target == player""];" \n
-       "	_self_actions set [count _self_actions, _action];" \n
-       "" \n
-       "	_action = _vehicle addAction [format[""<t color='#ffc600'>""+localize ""STR_PO3_ACTION_LIFTHOOKD""+""</t>""],{ [(vehicle player),false] spawn PO3_fnc_liftCamera; },[],-100,false,true,"""",""PO3_logistics_lifthook_active && driver _target == player""];" \n
-       "	_self_actions set [count _self_actions, _action];" \n
-       "" \n
        "	_action = _vehicle addAction [format[""<t color='#ffc600'>""+localize ""STR_PO3_ACTION_ILLUMFLARE""+""</t>""],{ [(vehicle player),""40_white""] spawn PO3_fnc_createIlluminationFlare; },[],-100,false,true,"""",""((position _target) select 2) > 100 && [player,_target] call PO3_fnc_isDriver""];" \n
        "	_self_actions set [count _self_actions, _action];" \n
        "};" \n

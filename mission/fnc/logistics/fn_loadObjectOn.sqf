@@ -34,8 +34,6 @@ waitUntil {
 	!(alive _object) ||
 	!(canMove _loader) ||
 	!(count crew _object == 0) ||
-	 ([_loader] call PO3_fnc_isLifted) ||
-	 ([_object] call PO3_fnc_isLifted) ||
 	!([_loader,_object] call PO3_fnc_isLoaded)
 };
 
