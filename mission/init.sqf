@@ -39,6 +39,14 @@ JTF2_SetupCustomChopper =
 	]
 ] execVM "Ares_CreateCustomMissionObject.sqf";
 
+if (isServer && (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) then
+{
+	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box");
+	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box_1");
+	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box_2");
+	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box_3");
+};
+
 if(!isDedicated) then {
 	Receiving_finish = false;
 	onPreloadFinished { Receiving_finish = true; onPreloadFinished {}; };

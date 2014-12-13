@@ -3109,7 +3109,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=64;
+		items=68;
 		class Item0
 		{
 			position[]={15191.997,17.924004,17367};
@@ -3577,6 +3577,30 @@ class Mission
 			a=0.69999999;
 			b=0.69999999;
 			angle=161.16368;
+		};
+		class Item64
+		{
+			position[]={15171.435,17.871162,17333.371};
+			name="radio_box";
+			type="Empty";
+		};
+		class Item65
+		{
+			position[]={15173.532,17.867247,17331.223};
+			name="radio_box_1";
+			type="Empty";
+		};
+		class Item66
+		{
+			position[]={15175.685,17.861507,17328.963};
+			name="radio_box_2";
+			type="Empty";
+		};
+		class Item67
+		{
+			position[]={15178.04,17.855225,17326.5};
+			name="radio_box_3";
+			type="Empty";
 		};
 	};
 	class Sensors
