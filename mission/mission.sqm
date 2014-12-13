@@ -1270,8 +1270,8 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={15088.543,17.604214,17192.912};
-			azimut=-317.48209;
+			position[]={15121.892,17.91,17248.889};
+			azimut=-404.69119;
 			id=88;
 			side="EMPTY";
 			vehicle="B_Truck_01_box_F";
@@ -1282,12 +1282,13 @@ class Mission
 		class Item21
 		{
 			position[]={15095.942,17.80624,17185.963};
-			azimut=-318.66025;
+			azimut=-318.66;
 			id=89;
 			side="EMPTY";
 			vehicle="Land_HelipadRescue_F";
 			lock="LOCKED";
 			skill=0.60000002;
+			init="_nul1 = [this] call PO3_fnc_setAsResupply;";
 		};
 		class Item22
 		{
@@ -1301,8 +1302,8 @@ class Mission
 		};
 		class Item23
 		{
-			position[]={15106.458,17.856384,17281.18};
-			azimut=-224.321;
+			position[]={15091.268,17.91,17216.457};
+			azimut=-46.540756;
 			id=91;
 			side="EMPTY";
 			vehicle="B_Truck_01_box_F";
@@ -1313,12 +1314,13 @@ class Mission
 		class Item24
 		{
 			position[]={15114.188,17.832067,17288.877};
-			azimut=-313.01251;
+			azimut=-313.013;
 			id=92;
 			side="EMPTY";
 			vehicle="Land_HelipadRescue_F";
 			lock="LOCKED";
 			skill=0.60000002;
+			init="_nul1 = [this] call PO3_fnc_setAsResupply;";
 		};
 		class Item25
 		{
@@ -1334,7 +1336,7 @@ class Mission
 		class Item26
 		{
 			position[]={15140.059,17.91,17186.295};
-			azimut=134.15631;
+			azimut=134.15601;
 			id=94;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -1350,21 +1352,23 @@ class Mission
 			vehicle="Land_HelipadSquare_F";
 			lock="LOCKED";
 			skill=0.60000002;
+			init="_nul1 = [this] call PO3_fnc_setAsResupply;";
 		};
 		class Item28
 		{
 			position[]={15071.944,17.91,17001.432};
-			azimut=-114.13563;
+			azimut=-114.136;
 			id=96;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			lock="LOCKED";
 			skill=0.60000002;
+			init="_nul1 = [this] call PO3_fnc_setAsResupply;";
 		};
 		class Item29
 		{
 			position[]={15156.943,17.91,17205.016};
-			azimut=134.15631;
+			azimut=134.15601;
 			id=97;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -2118,17 +2122,18 @@ class Mission
 		class Item103
 		{
 			position[]={15142.044,17.905006,16991.699};
-			azimut=-44.718582;
+			azimut=-44.718601;
 			id=171;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
 			lock="LOCKED";
 			skill=0.60000002;
+			init="_nul1 = [this] call PO3_fnc_setAsResupply;";
 		};
 		class Item104
 		{
 			position[]={15243.028,17.911528,17265.572};
-			azimut=134.15631;
+			azimut=134.15601;
 			id=172;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -2138,7 +2143,7 @@ class Mission
 		class Item105
 		{
 			position[]={15282.349,17.943277,17313.832};
-			azimut=134.15631;
+			azimut=134.15601;
 			id=173;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -2645,7 +2650,7 @@ class Mission
 		class Item163
 		{
 			position[]={15307.412,17.937599,17337.063};
-			azimut=134.15631;
+			azimut=134.15601;
 			id=231;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
@@ -2733,7 +2738,7 @@ class Mission
 		class Item173
 		{
 			position[]={15331.335,17.47044,17360.969};
-			azimut=134.15631;
+			azimut=134.15601;
 			id=241;
 			side="EMPTY";
 			vehicle="Land_HelipadSquare_F";
