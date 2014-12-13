@@ -45,6 +45,21 @@ if (isServer && (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) th
 	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box_1");
 	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box_2");
 	"TF_NATO_Radio_Crate" createVehicle (getMarkerPos "radio_box_3");
+	
+	REQUIRE_TFAR_FOR_CLIENTS = true;
+	publicVariable "REQUIRE_TFAR_FOR_CLIENTS";
+};
+
+if (not isNil "REQUIRE_TFAR_FOR_CLIENTS" && REQUIRE_TFAR_FOR_CLIENTS) then
+{
+	if (not isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
+	{
+		[] spawn {
+			sleep 3;
+			removeAllWeapons player;
+			titleText ["Task Force Radio is required on this server. Join us on teamspeak at www.jointtaskforce2.com.", "BLACK", 2];
+		};
+	};
 };
 
 if(!isDedicated) then {
