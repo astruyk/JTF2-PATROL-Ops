@@ -55,9 +55,12 @@ if (not isNil "REQUIRE_TFAR_FOR_CLIENTS") then
 	if (REQUIRE_TFAR_FOR_CLIENTS && not isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
 	{
 		[] spawn {
-			sleep 3;
-			removeAllWeapons player;
-			titleText ["Task Force Radio is required on this server. Join us on teamspeak at www.jointtaskforce2.com.", "BLACK FADED", 2];
+			// Have to loop this otherwise players can just use NVG's to dismiss it.
+			while {true} do {
+				sleep 5;
+				removeAllWeapons player;
+				titleText ["Task Force Radio is required on this server. Join us on teamspeak at www.jointtaskforce2.com.", "BLACK FADED", 2];
+			};
 		};
 	};
 };
