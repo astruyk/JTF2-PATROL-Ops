@@ -23,6 +23,21 @@ _backpacks = [];
 { if( _x IN PO3_CfgLogistics_UnitLoadoutBlacklist ) then { _items = _items - [_x]; }; }forEach _items;
 { if( _x IN PO3_CfgLogistics_UnitLoadoutBlacklist ) then { _backpacks = _backpacks - [_x]; }; }forEach _backpacks;
 
+if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
+{
+	_items pushBack "tf_anprc152";
+	_items pushBack "tf_rf7800str";
+	_items = _items - ["ItemRadio"];
+	
+	if (not ("tf_rt1523g" in _backpacks)) then { _backpacks pushBack "tf_rt1523g"; };
+	if (not ("tf_rt1523g_big" in _backpacks)) then { _backpacks pushBack "tf_rt1523g_big"; };
+	if (not ("tf_rt1523g_black" in _backpacks)) then { _backpacks pushBack "tf_rt1523g_black"; };
+	if (not ("tf_rt1523g_fabric" in _backpacks)) then { _backpacks pushBack "tf_rt1523g_fabric"; };
+	if (not ("tf_rt1523g_green" in _backpacks)) then { _backpacks pushBack "tf_rt1523g_green"; };
+	if (not ("tf_rt1523g_rhs" in _backpacks)) then { _backpacks pushBack "tf_rt1523g_rhs"; };
+	if (not ("tf_rt1523g_sage" in _backpacks)) then { _backpacks pushBack "tf_rt1523g_sage"; };
+};
+
 PO3_fnc_getWeaponsMags = {
 	private ["_weapons","_maglist","_mags","_EGLM"];
 
