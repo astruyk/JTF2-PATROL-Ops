@@ -41,7 +41,6 @@ waitUntil {
 			_isLCH = _vehicle getVariable ["PO3_liftchopper",nil];
 			_isLFT = _vehicle getVariable ["PO3_liftable",nil];
 			_isRSP = _vehicle getVariable ["PO3_resupply",nil];
-			_customTextures = _vehicle getVariable ["PO3_customObjectTextures", nil];
 
 			// MHQ can not be abandoned
 			if(!isNil "_isMHQ") then { _abandoned = false };
@@ -65,11 +64,18 @@ waitUntil {
 					if(!isNil "_isLCH") then { _vehicle setVariable ["PO3_liftchopper",_isLCH,true] };
 					if(!isNil "_isLFT") then { _vehicle setVariable ["PO3_liftable",_isLFT,true] };
 					if(!isNil "_isRSP") then { _vehicle setVariable ["PO3_resupply",_isRSP,true] };
-					if (!isNil "_customTextures") then
+					
+					if (_vehicle isKindOf "Heli_Transport_02_base_F") then
 					{
-						{
-							_vehicle setObjectTextureGlobal [_forEachIndex, _x];
-						} forEach _customTextures;
+						// Mowhawk variants
+						_vehicle setObjectTextureGlobal [0, "customSkins\CH148_0.paa"];
+						_vehicle setObjectTextureGlobal [1, "customSkins\CH148_1.paa"];
+						_vehicle setObjectTextureGlobal [2, "customSkins\CH148_2.paa"];
+					};
+					if (_vehicle isKindOf "I_Heli_light_03_base_F") then
+					{
+						// Hellcats (armed an unarmed variants)
+						_vehicle setObjectTexture [0, "customSkins\CH146_0.paa"];
 					};
 				};
 			};
