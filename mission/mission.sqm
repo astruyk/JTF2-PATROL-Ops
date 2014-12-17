@@ -97,7 +97,7 @@ class Mission
 	class Intel
 	{
 		briefingName="JTF2 Patrol Ops 3.1 - NATO";
-		overviewText="JTF2 modified version of Patrol Ops 3.1. (v.30)";
+		overviewText="JTF2 modified version of Patrol Ops 3.1. (v.31)";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
@@ -140,6 +140,7 @@ class Mission
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.5;
+					init="this setGroupId [""Command""]";
 					description="HQ Commander";
 				};
 				class Item1
@@ -152,6 +153,7 @@ class Mission
 					vehicle="B_recon_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
+					init="this setGroupId [""Command""]";
 					description="HQ Medic";
 				};
 			};
