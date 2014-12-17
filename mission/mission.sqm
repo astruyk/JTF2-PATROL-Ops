@@ -90,6 +90,7 @@ class Mission
 		"A3_Air_F_Heli_Heli_Transport_03",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Heli_Heli_Light_01",
+		"A3_Air_F_Beta_Heli_Transport_02",
 		"a3_map_altis"
 	};
 	randomSeed=11588837;
@@ -1188,7 +1189,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=212;
+		items=213;
 		class Item0
 		{
 			position[]={15201.66,17.940001,17290.037};
@@ -1326,7 +1327,7 @@ class Mission
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setVariable [""PO3_customObjectTextures"", [""customSkins\CH146_0.paa""]]; this setObjectTexture [0, ""customSkins\CH146_0.paa""];";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setObjectTexture [0, ""customSkins\CH146_0.paa""];";
 		};
 		class Item14
 		{
@@ -1393,8 +1394,8 @@ class Mission
 		};
 		class Item20
 		{
-			position[]={15121.892,17.91,17248.889};
-			azimut=-404.69119;
+			position[]={15116.512,17.91,17243.232};
+			azimut=-407.33438;
 			id=87;
 			side="EMPTY";
 			vehicle="B_Truck_01_box_F";
@@ -1425,7 +1426,7 @@ class Mission
 		};
 		class Item23
 		{
-			position[]={15091.268,17.91,17216.457};
+			position[]={15096.42,17.91,17222.154};
 			azimut=-46.540756;
 			id=90;
 			side="EMPTY";
@@ -2630,7 +2631,7 @@ class Mission
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			skill=0.60000002;
-			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setVariable [""PO3_customObjectTextures"", [""customSkins\CH146_0.paa""]]; this setObjectTexture [0, ""customSkins\CH146_0.paa""];";
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setObjectTexture [0, ""customSkins\CH146_0.paa""];";
 		};
 		class Item148
 		{
@@ -3228,6 +3229,17 @@ class Mission
 			vehicle="C_Heli_Light_01_civil_F";
 			skill=0.60000002;
 			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
+		};
+		class Item212
+		{
+			position[]={15071.195,17.91,17000.988};
+			azimut=73.923897;
+			offsetY=0.2;
+			id=279;
+			side="EMPTY";
+			vehicle="I_Heli_Transport_02_F";
+			skill=0.60000002;
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setObjectTexture [0, ""customSkins\CH148_0.paa""]; this setObjectTexture [1, ""customSkins\CH148_1.paa""]; this setObjectTexture [2, ""customSkins\CH148_2.paa""];";
 		};
 	};
 	class Markers
