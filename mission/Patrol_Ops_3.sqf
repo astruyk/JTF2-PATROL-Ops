@@ -129,7 +129,7 @@ if(PO3CLI) then {
 		switch (true) do {
 			case ( getText(configFile >> "CfgWeapons" >> primaryWeapon(player) >> "UIPicture" ) == "\a3\weapons_f\data\ui\icon_mg_ca.paa") : { player setVariable ["PO3_VAR_roleAttribute","MachineGunner",true] };
 			case ( getText(configFile >> "CfgWeapons" >> secondaryWeapon(player) >> "UIPicture" ) == "\a3\weapons_f\data\ui\icon_at_ca.paa") : { player setVariable ["PO3_VAR_roleAttribute","MissileSpecialist",true] };
-			case ( (typeOf player) IN ["B_soldier_repair_F","O_soldier_repair_F","I_soldier_repair_F"] ) : {
+			case ( (typeOf player) IN ["B_soldier_repair_F","O_soldier_repair_F","I_soldier_repair_F", "B_Helipilot_F"] ) : {
 				player setVariable ["PO3_VAR_roleAttribute","Support",true];
 				[player] call PO3_fnc_setAsCrewman; // Automatically Assign Drivers License
 				[player] call PO3_fnc_setAsPilot; // Automatically Assign Pilots License

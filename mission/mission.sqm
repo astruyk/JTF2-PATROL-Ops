@@ -936,7 +936,7 @@ class Mission
 					special="NONE";
 					id=53;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -972,7 +972,7 @@ class Mission
 					special="NONE";
 					id=55;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -987,7 +987,7 @@ class Mission
 					special="NONE";
 					id=56;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.40000001;
 					init="this setGroupId [""Raptor 1""]";
@@ -1008,7 +1008,7 @@ class Mission
 					special="NONE";
 					id=57;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					leader=1;
 					rank="SERGEANT";
@@ -1023,7 +1023,7 @@ class Mission
 					special="NONE";
 					id=58;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_Helipilot_F";
 					player="PLAY CDG";
 					skill=0.40000001;
 					init="this setGroupId [""Raptor 2""]";
