@@ -136,7 +136,7 @@ class Mission
 					special="NONE";
 					id=0;
 					side="WEST";
-					vehicle="B_recon_TL_F";
+					vehicle="B_officer_F";
 					player="PLAYER COMMANDER";
 					leader=1;
 					skill=0.5;
@@ -150,10 +150,10 @@ class Mission
 					special="NONE";
 					id=1;
 					side="WEST";
-					vehicle="B_recon_medic_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Command""]";
+					init="this setGroupId [""Command""];";
 					description="HQ Medic";
 				};
 			};
@@ -175,7 +175,7 @@ class Mission
 					player="PLAY CDG";
 					leader=1;
 					skill=0.40000001;
-					init="this setGroupId [""Ghost""]";
+					init="this setGroupId [""Ghost""]; this setVariable [""PO3_VAR_roleAttribute"", ""Recon""];";
 					description="Ghost (Recon/Explosives)";
 				};
 				class Item1
@@ -188,7 +188,7 @@ class Mission
 					vehicle="B_recon_JTAC_F";
 					player="PLAY CDG";
 					skill=0.44999999;
-					init="this setGroupId [""Ghost""]";
+					init="this setGroupId [""Ghost""]; this setVariable [""PO3_VAR_roleAttribute"", ""Recon""];";
 					description="Ghost (Recon/JTAC)";
 				};
 			};
@@ -301,7 +301,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Panther""]";
+					init="this setGroupId [""Panther""];";
 					description="Panther Medic";
 				};
 			};
@@ -414,7 +414,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Badger""]";
+					init="this setGroupId [""Badger""];";
 					description="Badger Medic";
 				};
 			};
@@ -527,7 +527,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Leopard""]";
+					init="this setGroupId [""Leopard""];";
 					description="Leopard Medic";
 				};
 			};
@@ -640,7 +640,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Fox""]";
+					init="this setGroupId [""Fox""];";
 					description="Fox Medic";
 				};
 			};
@@ -753,7 +753,7 @@ class Mission
 					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Mongoose""]";
+					init="this setGroupId [""Mongoose""];";
 					description="Mongoose Medic";
 				};
 			};
@@ -951,10 +951,10 @@ class Mission
 					special="NONE";
 					id=54;
 					side="WEST";
-					vehicle="B_soldier_repair_F";
+					vehicle="B_medic_F";
 					player="PLAY CDG";
 					skill=0.40000001;
-					init="this setGroupId [""Angel""]";
+					init="this setGroupId [""Angel""];";
 					description="Angel Medic";
 				};
 			};

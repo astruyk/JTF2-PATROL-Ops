@@ -124,7 +124,7 @@ if(PO3CLI) then {
 	[] spawn PO3_fnc_interaction_self;
 	if(PO3_param_respawn_halo_allow) then { ["halo"] call PO3_fnc_addRespawnPosLocal; };
 
-	_preAssignedRole = player setVariable ["PO3_VAR_roleAttribute",nil];
+	_preAssignedRole = player getVariable ["PO3_VAR_roleAttribute", nil];
 	if(isNil "_preAssignedRole") then {
 		switch (true) do {
 			case ( getText(configFile >> "CfgWeapons" >> primaryWeapon(player) >> "UIPicture" ) == "\a3\weapons_f\data\ui\icon_mg_ca.paa") : { player setVariable ["PO3_VAR_roleAttribute","MachineGunner",true] };
