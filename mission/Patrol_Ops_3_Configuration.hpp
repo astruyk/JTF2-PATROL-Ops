@@ -216,7 +216,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		,[/*Weapons*/
 				"MineDetector","arifle_SDAR_F"
 			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MX_SW_Black_F","arifle_MX_F","arifle_MX_SW_F","LMG_Mk200_F"
+				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MX_SW_Black_F","arifle_MX_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F"
 			/*CSAT*/
 		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","LMG_Zafir_F"
 			/*AAF*/
@@ -227,7 +227,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
 				,"Titan_AA","Titan_AP","Titan_AT"
 			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
+				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F", "150Rnd_762x51_Box", "150Rnd_762x51_Box_Tracer"
 			/*CSAT*/
 		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
 			/*AAF*/
@@ -323,7 +323,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 				"MineDetector","arifle_SDAR_F"
 			/*NATO*/
 				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MXC_Black_F","arifle_MXM_Black_F","arifle_MX_F","arifle_MXC_F","arifle_MXM_F","srifle_EBR_F","srifle_LRR_F","SMG_01_F"
-				,"launch_NLAW_F"
+				,"launch_NLAW_F", "srifle_DMR_01_F"
 			/*CSAT*/
 		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","srifle_DMR_01_F","srifle_GM6_F","SMG_02_F"
 		//		,"launch_RPG32_F"
@@ -336,7 +336,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
 				,"Titan_AA","Titan_AP","Titan_AT"
 			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
+				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F", "10Rnd_762x51_Mag"
 			/*CSAT*/
 		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
 			/*AAF*/
