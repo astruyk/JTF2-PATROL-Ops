@@ -8,5 +8,6 @@ class JTF2
 		class PositionBase;
 		class initVehicleForLaserGuide;
 		class SetupSign;
+		class IsPlayerAuthorizedForZeus;
 	};
 };

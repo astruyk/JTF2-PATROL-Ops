@@ -50,16 +50,51 @@ if (isServer && (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) th
 	publicVariable "REQUIRE_TFAR_FOR_CLIENTS";
 };
 
+_isShowingPermanentMessage = false;
 if (not isNil "REQUIRE_TFAR_FOR_CLIENTS") then
 {
 	if (REQUIRE_TFAR_FOR_CLIENTS && not isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
 	{
+		_isShowingPermanentMessage = true;
 		[] spawn {
 			// Have to loop this otherwise players can just use NVG's to dismiss it.
 			while {true} do {
 				sleep 5;
 				removeAllWeapons player;
 				titleText ["Task Force Radio is required on this server. Join us on teamspeak at www.jointtaskforce2.com.", "BLACK FADED", 2];
+			};
+		};
+	};
+};
+
+if (not isNil "publicZeusSlot") then
+{
+	if (player == publicZeusSlot) then
+	{
+		if ([player] call JTF2_fnc_isPlayerAuthorizedForZeus) then
+		{
+			[] spawn
+			{
+				player assignCurator publicZeusModule;
+				titleText ["Welcome Zeus!", "PLAIN"];
+				sleep 5;
+				titleFadeOut 2;
+			};
+			
+		}
+		else
+		{
+			if (!_isShowingPermanentMessage) then
+			{
+				_isShowingPermanentMessage = true;
+				[] spawn {
+					// Have to loop this otherwise players can just use NVG's to dismiss it.
+					while {true} do {
+						sleep 5;
+						removeAllWeapons player;
+						titleText ["Sorry - your UID is not authorized to use zeus on this server. Please choose another role.", "BLACK FADED", 2];
+					};
+				};
 			};
 		};
 	};
