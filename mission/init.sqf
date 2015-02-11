@@ -1,6 +1,6 @@
 ["INIT",format["Executing %1 init.sqf",missionName],true] call PO3_fnc_log;
 
-if (isServer) then { [zeusModule,true] execVM "ADV_zeus.sqf"; };
+if (isServer) then { [[zeusModule, publicZeusModule], true] execVM "ADV_zeus.sqf"; };
 [] execVM "ClearZeusGroups.sqf";
 [] execVM "Patrol_Ops_3.sqf";
 [] execVM "jtf2\scripts\InitDynamicVehicles.sqf";
@@ -69,13 +69,18 @@ if (not isNil "REQUIRE_TFAR_FOR_CLIENTS") then
 
 setPublicZeusFunc =
 	{
-		if (_this select 1) then
+		sleep 1;
+		_isZeus = _this select 0;
+		diag_log "Disabling public zeus slot...";
+		unassignCurator publicZeusModule;
+		if (_isZeus) then
 		{
-			(_this select 0) assignCurator publicZeusModule;
+			diag_log "Assigning back to player. Authorized.";
+			publicZeusSlot assignCurator publicZeusModule;
 		}
 		else
 		{
-			unassignCurator publicZeusModule;
+			diag_log "... Player not authorized.";
 		};
 	};
 if (not isNil "publicZeusSlot") then
@@ -84,9 +89,9 @@ if (not isNil "publicZeusSlot") then
 	{
 		if ([player] call JTF2_fnc_isPlayerAuthorizedForZeus) then
 		{
+			[[true], "setPublicZeusFunc", false] call BIS_fnc_MP;
 			[] spawn
 			{
-				[[player, true], "setPublicZeusFunc", false] call BIS_fnc_MP;
 				titleText ["Welcome Zeus!", "PLAIN"];
 				sleep 5;
 				titleFadeOut 2;
@@ -94,7 +99,7 @@ if (not isNil "publicZeusSlot") then
 		}
 		else
 		{
-			[[player, false], "setPublicZeusFunc", false] call BIS_fnc_MP;
+			[[false], "setPublicZeusFunc", false] call BIS_fnc_MP;
 			if (!_isShowingPermanentMessage) then
 			{
 				_isShowingPermanentMessage = true;
