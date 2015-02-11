@@ -67,6 +67,17 @@ if (not isNil "REQUIRE_TFAR_FOR_CLIENTS") then
 	};
 };
 
+setPublicZeusFunc =
+	{
+		if (_this select 1) then
+		{
+			(_this select 0) assignCurator publicZeusModule;
+		}
+		else
+		{
+			unassignCurator publicZeusModule;
+		};
+	};
 if (not isNil "publicZeusSlot") then
 {
 	if (player == publicZeusSlot) then
@@ -75,15 +86,15 @@ if (not isNil "publicZeusSlot") then
 		{
 			[] spawn
 			{
-				player assignCurator publicZeusModule;
+				[[player, true], "setPublicZeusFunc", false] call BIS_fnc_MP;
 				titleText ["Welcome Zeus!", "PLAIN"];
 				sleep 5;
 				titleFadeOut 2;
 			};
-			
 		}
 		else
 		{
+			[[player, false], "setPublicZeusFunc", false] call BIS_fnc_MP;
 			if (!_isShowingPermanentMessage) then
 			{
 				_isShowingPermanentMessage = true;
