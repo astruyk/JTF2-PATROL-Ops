@@ -50,12 +50,10 @@ if (isServer && (isClass (configFile >> "CfgPatches" >> "task_force_radio"))) th
 	publicVariable "REQUIRE_TFAR_FOR_CLIENTS";
 };
 
-_isShowingPermanentMessage = false;
 if (not isNil "REQUIRE_TFAR_FOR_CLIENTS") then
 {
 	if (REQUIRE_TFAR_FOR_CLIENTS && not isClass (configFile >> "CfgPatches" >> "task_force_radio")) then
 	{
-		_isShowingPermanentMessage = true;
 		[] spawn {
 			// Have to loop this otherwise players can just use NVG's to dismiss it.
 			while {true} do {
@@ -67,52 +65,54 @@ if (not isNil "REQUIRE_TFAR_FOR_CLIENTS") then
 	};
 };
 
-setPublicZeusFunc =
+showZeusMessageFunc = 
 	{
-		sleep 1;
 		_isZeus = _this select 0;
-		diag_log "Disabling public zeus slot...";
-		unassignCurator publicZeusModule;
 		if (_isZeus) then
 		{
-			diag_log "Assigning back to player. Authorized.";
+			titleText ["Welcome Zeus! (May take a moment to enable)", "PLAIN"];
+			sleep 5;
+			titleFadeOut 2;
+		}
+		else
+		{
+			// Have to loop this otherwise players can just use NVG's to dismiss it.
+			while { true } do
+			{
+				sleep 5;
+				removeAllWeapons player;
+				titleText ["Sorry - your UID is not authorized to use zeus on this server. Please choose another role.", "BLACK FADED", 2];
+			};
+		};
+	};
+checkPublicZeusFunc =
+	{
+		_unit = _this select 0;
+		if (isNil "publicZeusSlot") exitWith { diag_log "No unit in publicZeusSlot slot. Aborting zeus check."; };
+		if (_unit != publicZeusSlot) exitWith { diag_log format["Player (%1) is not in the publicZeusSlot slot (%3). Aborting check.", _unit, publicZeusSlot]; };
+		
+		if ([_unit] call JTF2_fnc_isPlayerAuthorizedForZeus) then
+		{
+			[[true], "showZeusMessageFunc", _unit] call BIS_fnc_MP;
+			diag_log "Player is authorized for public zeus slot... Resetting curator (sleeping).";
+			sleep 5;
+			diag_log "Player is authorized for public zeus slot... Resetting curator (assigning).";
+			unassignCurator publicZeusModule;
 			publicZeusSlot assignCurator publicZeusModule;
 		}
 		else
 		{
-			diag_log "... Player not authorized.";
+			[[false], "showZeusMessageFunc", _unit] call BIS_fnc_MP;
+			diag_log "Player not authorized for public zeus slot... Disabling curator.";
+			unassignCurator publicZeusModule;
 		};
 	};
-if (not isNil "publicZeusSlot") then
+if (!isServer) then
 {
-	if (player == publicZeusSlot) then
-	{
-		if ([player] call JTF2_fnc_isPlayerAuthorizedForZeus) then
-		{
-			[[true], "setPublicZeusFunc", false] call BIS_fnc_MP;
-			[] spawn
-			{
-				titleText ["Welcome Zeus!", "PLAIN"];
-				sleep 5;
-				titleFadeOut 2;
-			};
-		}
-		else
-		{
-			[[false], "setPublicZeusFunc", false] call BIS_fnc_MP;
-			if (!_isShowingPermanentMessage) then
-			{
-				_isShowingPermanentMessage = true;
-				[] spawn {
-					// Have to loop this otherwise players can just use NVG's to dismiss it.
-					while {true} do {
-						sleep 5;
-						removeAllWeapons player;
-						titleText ["Sorry - your UID is not authorized to use zeus on this server. Please choose another role.", "BLACK FADED", 2];
-					};
-				};
-			};
-		};
+	// Run this on the server because it needs to be the one to set up the curator
+	[] spawn {
+		waitUntil {!isNull player};
+		[[player], "checkPublicZeusFunc", false] call BIS_fnc_MP;
 	};
 };
 
