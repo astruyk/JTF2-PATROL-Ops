@@ -115,7 +115,7 @@ class Mission
 	class Intel
 	{
 		briefingName="JTF2 Patrol Ops 3.1 - NATO";
-		overviewText="JTF2 modified version of Patrol Ops 3.1. (v.37)";
+		overviewText="JTF2 modified version of Patrol Ops 3.1. (v.38)";
 		resistanceWest=0;
 		resistanceEast=1;
 		timeOfChanges=28800;
