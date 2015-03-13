@@ -31,6 +31,8 @@ _authorizedUsers = [
 	"76561197988934617", // Hollberton PVT.
 	"76561198033257910", // Billionaire PVT.
 	"76561198007367016", // Almonds CPL.
+	"76561198035289808", // Crazygamer
+	"76561198171663575", // Sharky
 	"0"// Placeholder because I'm lazy
 ];
 
