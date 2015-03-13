@@ -33,6 +33,10 @@ _authorizedUsers = [
 	"76561198007367016", // Almonds CPL.
 	"76561198035289808", // Crazygamer
 	"76561198171663575", // Sharky
+	"76561198009612846", // Nurn
+	"76561198018855160", // Joseph
+	"76561198097876837", // CalebKT
+	"76561198027748951", // Wilks
 	"0"// Placeholder because I'm lazy
 ];
 
