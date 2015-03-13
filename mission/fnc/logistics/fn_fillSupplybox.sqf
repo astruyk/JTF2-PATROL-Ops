@@ -5,8 +5,6 @@ _data = [];
 
 player reveal _cache;
 
-_cache setVariable ["PO3_VAS",true,false];
-
 while {alive _cache} do {
 
 	_data = call PO3_fnc_getCfgPO3Loadout;
