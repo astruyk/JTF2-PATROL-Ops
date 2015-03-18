@@ -4,6 +4,7 @@ if (isServer) then { [[zeusModule, publicZeusModule], true] execVM "ADV_zeus.sqf
 [] execVM "ClearZeusGroups.sqf";
 [] execVM "Patrol_Ops_3.sqf";
 [] execVM "jtf2\scripts\InitDynamicVehicles.sqf";
+[] execVM "jtf2\scripts\sideMissions\initSideMissions.sqf";
 
 // Define a function we can use to setup a chopper as a lift chopper and
 // assign a custom skin locally.
