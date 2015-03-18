@@ -29,6 +29,21 @@ class CfgNotifications {
 };
 class Params {
 	#include "data\params.hpp"
+	
+	class JTF2_param_section_title {
+		title = "====== JTF2 Mission Options ======";
+		values[]= {0};
+		texts[]= {" "};
+		default = 0;
+		code = "";
+	};
+	
+	class JTF2_param_spawn_all_ambient_patrols {
+		title = "Side Mission & Patrol Spawn Chance";
+		values[]= {0, 1, 2};
+		texts[]= {"Don't Spawn Anything", "Normal Spawn Chances", "Force Spawn All Side Missions & Patrols"};
+		default = 1;
+	};
 };
 class RscTitles {
 	#include "data\rscTitles.hpp"
