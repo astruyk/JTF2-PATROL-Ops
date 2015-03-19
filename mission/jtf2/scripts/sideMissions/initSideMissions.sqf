@@ -17,7 +17,8 @@ if (isServer) then
 	
 	_sidemissions =
 		[
-			"sidemission_aaa_pyrsos.sqf"
+			"sidemission_aaa_pyrsos.sqf",
+			"sidemission_aaf_airfield.sqf"
 		];
 		
 	_patrols =
