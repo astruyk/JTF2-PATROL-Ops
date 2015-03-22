@@ -1,4 +1,5 @@
 private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_crashUAV","_spawnAmbush","_intelpercent","_increment","_fired1","_fired2","_fired3","_fired4"];
+#include "taskDefines.sqf"
 // =========================================================================================================
 //	Define Random Location
 // =========================================================================================================
@@ -81,33 +82,70 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 // =========================================================================================================
 
 	_spawnAmbush = {
-		private["_position","_b","_ingress","_grp"];
-
+		private["_position","_waveNumber","_ingress","_grp", "_playerCount", "_vehClass", "_vehSpawnChance", "_maxVehSpawns", "_infSquadCount", "_heloReinforcementsChance"];
 		_position = _this select 0;
-		_b = _this select 1;
+		_waveNumber = _this select 1;
 		_ingress = [_position ,[400,500],random 360,false] call PO3_fnc_getPos;
-
+		_playerCount = (playersNumber(PO3_side_1 select 0) max 1);
 		_vehClass = [];
-		if(_b >= 3) then { _vehClass set [count _vehClass,3]; };
-		if(_b >= 4) then { _vehClass set [count _vehClass,5]; };
-		if(_b >= 7) then { _vehClass set [count _vehClass,4]; };
+		_vehSpawnChance = 0.65;
+		_maxVehSpawns = 0;
+		_infSquadCount = 0;
+		_heloReinforcementsChance = 0;
+		switch (_waveNumber) do
+		{
+			case 0:
+			{
+				_infSquadCount = round (_playerCount / 3) max 1;
+				_vehClass = [VEH_CLASS_TRANSPORT_TRUCK, VEH_CLASS_LIGHT_VEHICLE];
+				_vehSpawnChance = 0.25;
+				_maxVehSpawns = 3;
+				_heloReinforcementsChance = 0.75;
+			};
+			case 1:
+			{
+				_infSquadCount = round (_playerCount / 3) max 1;
+				_vehClass = [VEH_CLASS_LIGHT_VEHICLE, VEH_CLASS_MEDIUM_VEHICLE];
+				_vehSpawnChance = 0.5;
+				_maxVehSpawns = round (_playerCount / 2) max 1;
+				_heloReinforcementsChance = 0;
+			};
+			case 2:
+			{
+				_infSquadCount = round (_playerCount / 3) max 1;
+				_vehClass = [VEH_CLASS_ANTI_AIR, VEH_CLASS_HEAVY_VEHICLE, VEH_CLASS_MEDIUM_VEHICLE];
+				_vehSpawnChance = 0.8;
+				_maxVehSpawns = round (_playerCount / 5) max 1;
+				_heloReinforcementsChance = round ((_playerCount / 10) - 2) min 1;
+			};
+		};
 
-		for "_i" from 0 to _b do {
+		if (_playerCount < 5) then
+		{
+			_vehClass = [VEH_CLASS_TRANSPORT_TRUCK, VEH_CLASS_TRANSPORT_TRUCK, VEH_CLASS_LIGHT_VEHICLE];
+		};
+
+		for "_i" from 1 to _infSquadCount do {
 			_grp = nil;
 			_grp = [ _ingress, (PO3_side_3 select 0), format["EN_GroupForce_%1",round random 9], 50 ] call PO3_fnc_createGroup;
 			if !(isNil "_grp") then {
 				[ _position, _grp ] spawn PO3_fnc_groupAttackPos;
+				if (_i == 1) then
+				{
+					_grp setBehaviour "AWARE";
+					_grp setSpeedMode "FULL";
+				};
 				PO3_TOTAL_UNITS = PO3_TOTAL_UNITS + (units _grp);
 				sleep 1;
 			};
 		};
 
-		for "_i" from 0 to (_b min 5) do {
-			if(random 1 > 0.65 || _b >= 9) then {
+		for "_i" from 1 to _maxVehSpawns do {
+			if(random 1 <= _vehSpawnChance) then {
 				_class = _vehClass call PO3_fnc_getVehicleTypes;
 				if(count _class > 0) then {
-					_ingress = [_position ,[500,600],random 360,false] call PO3_fnc_getPos;
-					_veh = ([ _ingress,_class call PO3_fnc_getArrayRandom,random 360,100,(PO3_side_3 select 0)] call PO3_fnc_createVehicle) select 0;
+					_ingress = [_position ,[600,700],random 360,false] call PO3_fnc_getPos;
+					_veh = ([ _ingress,_class call PO3_fnc_getArrayRandom,random 360,50,(PO3_side_3 select 0)] call PO3_fnc_createVehicle) select 0;
 					if !(isNil "_veh") then {
 						[ _position, _veh, 150+(100 *_i) ] spawn PO3_fnc_groupPatrolArea;
 						PO3_TOTAL_UNITS = PO3_TOTAL_UNITS + (units _veh);
@@ -117,7 +155,7 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 			};
 		};
 
-		if(random 1 > 0.4) then {
+		if(random 1 <= _heloReinforcementsChance) then {
 			[_position,(PO3_side_3 select 0),([7] call PO3_fnc_getVehicleTypes) call PO3_fnc_getArrayRandom,format["EN_GroupForce_%1",round random 9]] call PO3_fnc_supportCreateHeloReinforcements;
 		};
 	};
@@ -131,26 +169,18 @@ private["_location","_position","_locaname","_locRadis","_spawnPos","_class","_c
 	While{ _intelpercent < 1 && damage _crashUAV < 0.9 } do {
 		sleep 1;
 
-		// Old crazy logic.
-		//_b = (6*(playersNumber(PO3_side_1 select 0)/40)*PO3_TASK__DIF) max 1;
-		//_b = round(((playersNumber(PO3_side_1 select 0) max 1)*PO3_param_missionskill max 1) * abs(log(( (playersNumber(PO3_side_1 select 0) max 1)/2)/64)));
-		
-		// We want a linear interpolation where for 1 player we have {1.5, 3, 6} as the values for _b, and at 32 (our max server size) we have {4, 8, 16}.
-		// This is a line where y = (5/31*(x-1)) + 3;
-		_b = round(((5/31 * (((playersNumber(PO3_side_1 select 0) max 1) * PO3_param_missionskill) - 1)) + 3));
-
 		if( _intelpercent > 0.1 && !_fired1 ) then {
-			[_position,(_b/2)] spawn _spawnAmbush;
+			[_position,1] spawn _spawnAmbush;
 			_fired1 = true;
 		};
 
 		if( _intelpercent > 0.4 && !_fired2 ) then {
-			[_position,(_b)] spawn _spawnAmbush;
+			[_position,2] spawn _spawnAmbush;
 			_fired2 = true;
 		};
 
 		if( _intelpercent > 0.7 && !_fired4 ) then {
-			[_position,(_b*2)] spawn _spawnAmbush;
+			[_position,3] spawn _spawnAmbush;
 			_fired4 = true;
 		};
 
