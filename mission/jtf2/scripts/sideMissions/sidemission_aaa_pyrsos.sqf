@@ -331,19 +331,6 @@ _veh22 = createVehicle ["CamoNet_OPFOR_F",[9764.5332,19894.232,0],[],0,"CAN_COLL
 _veh23 = createVehicle ["O_MRAP_02_F",[9956.2891,19365.281,0],[],0,"CAN_COLLIDE"];
 		_veh23 setFormDir 653.31165; _veh23 setDir 653.31165;
 // --Units--
-_group0 = createGroup west;
-_group2 = createGroup west;
-	_unit2 = _group2 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit2) then {_unit2 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit2,_group2] call BIS_fnc_spawnCrew;};
-_group4 = createGroup west;
-	_unit4 = _group4 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit4) then {_unit4 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit4,_group4] call BIS_fnc_spawnCrew;};
-_group6 = createGroup west;
-	_unit6 = _group6 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit6) then {_unit6 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit6,_group6] call BIS_fnc_spawnCrew;};
-_group8 = createGroup west;
-	_unit8 = _group8 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit8) then {_unit8 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit8,_group8] call BIS_fnc_spawnCrew;};
 _group10 = createGroup east;
 if (random 1 < 0.66) then {
 	_unit10 = _group10 createUnit ["O_HMG_01_high_F",[9134.3525,19196.693,0],[],0,"CAN_COLLIDE"];

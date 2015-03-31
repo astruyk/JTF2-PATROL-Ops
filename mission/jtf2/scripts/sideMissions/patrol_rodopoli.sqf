@@ -185,13 +185,6 @@ createMarker ["jtf2_pilot_1_1",[9359.1738,23425.443,-0.0038331992]];
 	"jtf2_pilot_1_1" setMarkerType "mil_warning";
 	"jtf2_pilot_1_1" setMarkerText "Please listen to your squad leads and play nice!";
 // --Units--
-_group0 = createGroup west;
-_group2 = createGroup west;
-	_unit2 = _group2 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit2) then {_unit2 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit2,_group2] call BIS_fnc_spawnCrew;};
-_group4 = createGroup west;
-	_unit4 = _group4 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit4) then {_unit4 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit4,_group4] call BIS_fnc_spawnCrew;};
 _group6 = createGroup east;
 	_unit6 = _group6 createUnit ["O_soldier_TL_F",[18967.953,16635.992,0],[],0,"CAN_COLLIDE"];
 	if (isNull _unit6) then {_unit6 = createVehicle ["O_soldier_TL_F",[18967.953,16635.992,0],[],0,"CAN_COLLIDE"]; [_unit6,_group6] call BIS_fnc_spawnCrew;};

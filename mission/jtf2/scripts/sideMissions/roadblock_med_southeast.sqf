@@ -178,9 +178,6 @@ _veh36 = createVehicle ["O_Truck_02_transport_F",[16898.867,15470.846,0],[],0,"C
 		_veh36 setFormDir -131.2657; _veh36 setDir -131.2657;
 // --Units--
 _group0 = createGroup west;
-_group2 = createGroup west;
-	_unit2 = _group2 createUnit ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"];
-	if (isNull _unit2) then {_unit2 = createVehicle ["B_Soldier_F",[15174.233,17348.43,0],[],0,"CAN_COLLIDE"]; [_unit2,_group2] call BIS_fnc_spawnCrew;};
 _group4 = createGroup east;
 	_unit4 = _group4 createUnit ["O_HMG_01_high_F",[16878.545,15334.471,0],[],0,"CAN_COLLIDE"];
 	if (isNull _unit4) then {_unit4 = createVehicle ["O_HMG_01_high_F",[16878.545,15334.471,0],[],0,"CAN_COLLIDE"]; [_unit4,_group4] call BIS_fnc_spawnCrew;};
