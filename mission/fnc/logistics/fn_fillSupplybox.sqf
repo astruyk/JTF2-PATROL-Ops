@@ -28,21 +28,42 @@ while {alive _cache} do {
 //	{ _cache addItemCargo [_x, 1]; } foreach (_data select 4);
 //	{ _cache addItemCargo [_x, 1]; } foreach (_data select 5);
 
-	// Remove all the virtual things from the box
-	[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call BIS_fnc_removeVirtualBackpackCargo;
-	[_cache, ([_cache] call BIS_fnc_getVirtualItemCargo)] call BIS_fnc_removeVirtualItemCargo;
-	[_cache, ([_cache] call BIS_fnc_getVirtualMagazineCargo)] call BIS_fnc_removeVirtualMagazineCargo;
-	[_cache, ([_cache] call BIS_fnc_getVirtualWeaponCargo)] call BIS_fnc_removeVirtualWeaponCargo;
-	
-	// Add all of the new virtual items we want in the box.
-	[_cache, _data select 0] call BIS_fnc_addVirtualWeaponCargo;
-	[_cache, _data select 1] call BIS_fnc_addVirtualMagazineCargo;
-	[_cache, _data select 2] call BIS_fnc_addVirtualItemCargo;
-	[_cache, _data select 3] call BIS_fnc_addVirtualBackpackCargo;
-	[_cache, _data select 4] call BIS_fnc_addVirtualItemCargo;
+	if (isClass(configFile >> "CfgPatches" >> "XLA_FixedArsenal")) then
+	{
+		// Remove all the virtual things from the box
+		[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call XLA_fnc_removeVirtualBackpackCargo;
+		[_cache, ([_cache] call BIS_fnc_getVirtualItemCargo)] call XLA_fnc_removeVirtualItemCargo;
+		[_cache, ([_cache] call BIS_fnc_getVirtualMagazineCargo)] call XLA_fnc_removeVirtualMagazineCargo;
+		[_cache, ([_cache] call BIS_fnc_getVirtualWeaponCargo)] call XLA_fnc_removeVirtualWeaponCargo;
+		
+		// Add all of the new virtual items we want in the box.
+		[_cache, _data select 0] call XLA_fnc_addVirtualWeaponCargo;
+		[_cache, _data select 1] call XLA_fnc_addVirtualMagazineCargo;
+		[_cache, _data select 2] call XLA_fnc_addVirtualItemCargo;
+		[_cache, _data select 3] call XLA_fnc_addVirtualBackpackCargo;
+		[_cache, _data select 4] call XLA_fnc_addVirtualItemCargo;
 
-	// Mark the object as an arsenal object
-	["AmmoboxInit", [_cache, false, {true}]] call BIS_fnc_arsenal;
+		// Mark the object as an arsenal object
+		["AmmoboxInit", [_cache, false, {true}]] call XLA_fnc_arsenal;
+	}
+	else
+	{
+		// Remove all the virtual things from the box
+		[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call BIS_fnc_removeVirtualBackpackCargo;
+		[_cache, ([_cache] call BIS_fnc_getVirtualItemCargo)] call BIS_fnc_removeVirtualItemCargo;
+		[_cache, ([_cache] call BIS_fnc_getVirtualMagazineCargo)] call BIS_fnc_removeVirtualMagazineCargo;
+		[_cache, ([_cache] call BIS_fnc_getVirtualWeaponCargo)] call BIS_fnc_removeVirtualWeaponCargo;
+		
+		// Add all of the new virtual items we want in the box.
+		[_cache, _data select 0] call BIS_fnc_addVirtualWeaponCargo;
+		[_cache, _data select 1] call BIS_fnc_addVirtualMagazineCargo;
+		[_cache, _data select 2] call BIS_fnc_addVirtualItemCargo;
+		[_cache, _data select 3] call BIS_fnc_addVirtualBackpackCargo;
+		[_cache, _data select 4] call BIS_fnc_addVirtualItemCargo;
+
+		// Mark the object as an arsenal object
+		["AmmoboxInit", [_cache, false, {true}]] call BIS_fnc_arsenal;
+	};
 
 	waitUntil { sleep 10; _timer = _timer - 1; !(rank player == _rank && _timer > 0) };
 };
