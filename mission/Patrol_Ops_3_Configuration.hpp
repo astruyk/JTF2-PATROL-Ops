@@ -183,7 +183,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
 		]
 		,[/*Items*/
-				"Binocular","Laserdesignator","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
+				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
 				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
 				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
 			/*NATO*/
@@ -234,7 +234,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
 		]
 		,[/*Items*/
-				"Binocular","Laserdesignator","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
+				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
 				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
 				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
 			/*NATO*/
@@ -289,7 +289,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
 		]
 		,[/*Items*/
-				"Binocular","Laserdesignator","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
+				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
 				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
 				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
 			/*NATO*/
