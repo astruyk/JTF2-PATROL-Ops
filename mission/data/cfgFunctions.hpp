@@ -113,7 +113,6 @@
 			class refuelVehicle;
 			class repairVehicle;
 			class resupplyVehicle;
-			class setAsAmmobox;
 			class setAsCRV;
 			class setAsDraggable;
 			class setAsLoadable;
