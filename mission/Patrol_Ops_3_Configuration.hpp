@@ -187,7 +187,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
 				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
 			/*NATO*/
-				,"NVGoggles","B_UavTerminal"
+				,"NVGoggles"
 				,"H_Booniehat_mcamo","H_MilCap_mcamo","H_HelmetB","H_HelmetB_camo","H_HelmetB_desert","H_HelmetB_light","H_HelmetB_light_desert","H_HelmetB_light_grass","H_HelmetB_light_sand","H_HelmetB_paint","H_HelmetB_plain_mcamo","H_HelmetB_sand"
 				,"U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_vest","U_B_CTRG_1","U_B_CTRG_3","U_B_Wetsuit"
 				,"V_PlateCarrier1_rgr","V_PlateCarrier3_rgr","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_RebreatherB"
@@ -205,7 +205,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		,[/*Backpacks*/
 				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
 			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_UAV_01_backpack_F","B_Mortar_01_support_F","B_Mortar_01_weapon_F"
+				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo"
 			/*CSAT*/
 		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
 			/*AAF*/
@@ -223,7 +223,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		//		,"hgun_ACPC2_F","hgun_Pistol_heavy_02_F","arifle_Mk20_F","arifle_Mk20C_F","LMG_Mk200_F"
 		]
 		,[/*Mags*/
-				"Laserbatteries","DemoCharge_Remote_Mag","APERSTripMine_Wire_Mag"
+				"Laserbatteries","DemoCharge_Remote_Mag"
 				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
 				,"Titan_AA","Titan_AP","Titan_AT"
 			/*NATO*/
@@ -256,7 +256,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		,[/*Backpacks*/
 				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
 			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_UAV_01_backpack_F","B_Mortar_01_support_F","B_Mortar_01_weapon_F"
+				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo"
 			/*CSAT*/
 		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
 			/*AAF*/
@@ -278,7 +278,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		//		,"launch_I_Titan_F","launch_I_Titan_short_F","launch_NLAW_F"
 		]
 		,[/*Mags*/
-				"Laserbatteries","DemoCharge_Remote_Mag","APERSTripMine_Wire_Mag"
+				"Laserbatteries","DemoCharge_Remote_Mag"
 				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
 				,"Titan_AA","Titan_AP","Titan_AT"
 			/*NATO*/
@@ -311,7 +311,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		,[/*Backpacks*/
 				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
 			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_UAV_01_backpack_F","B_Mortar_01_support_F","B_Mortar_01_weapon_F"
+				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo"
 			/*CSAT*/
 		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
 			/*AAF*/
@@ -395,7 +395,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
 		]
 		,[/*Items*/
-				"Binocular","Laserdesignator","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
+				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
 				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
 				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
 			/*NATO*/
@@ -417,7 +417,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 		,[/*Backpacks*/
 				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
 			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_UAV_01_backpack_F","B_Mortar_01_support_F","B_Mortar_01_weapon_F"
+				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_Mortar_01_support_F","B_Mortar_01_weapon_F"
 			/*CSAT*/
 		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
 			/*AAF*/
