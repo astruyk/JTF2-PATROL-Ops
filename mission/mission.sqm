@@ -59,7 +59,8 @@ class Mission
 		"A3_Air_F_Heli_Heli_Transport_04",
 		"A3_Structures_F_Mil_BagBunker",
 		"A3_Soft_F_TruckHeavy",
-		"A3_Characters_F_Gamma"
+		"A3_Characters_F_Gamma",
+		"A3_Soft_F_MRAP_03"
 	};
 	addOnsAuto[]=
 	{
@@ -102,6 +103,7 @@ class Mission
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Heli_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_02",
+		"A3_Soft_F_MRAP_03",
 		"a3_map_altis"
 	};
 	randomSeed=11588837;
@@ -1186,7 +1188,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=213;
+		items=216;
 		class Item0
 		{
 			position[]={15201.66,17.940001,17290.037};
@@ -1984,7 +1986,7 @@ class Mission
 		};
 		class Item77
 		{
-			position[]={15180.925,17.919527,17296.279};
+			position[]={15180.085,17.919031,17295.813};
 			azimut=44.224998;
 			id=141;
 			side="EMPTY";
@@ -1994,7 +1996,7 @@ class Mission
 		};
 		class Item78
 		{
-			position[]={15184.497,17.925997,17292.232};
+			position[]={15183.098,17.924131,17293.168};
 			azimut=-314.91901;
 			id=142;
 			side="EMPTY";
@@ -2626,7 +2628,7 @@ class Mission
 			offsetY=0.2;
 			id=211;
 			side="EMPTY";
-			vehicle="I_Heli_light_03_F";
+			vehicle="I_Heli_light_03_unarmed_F";
 			skill=0.60000002;
 			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setObjectTexture [0, ""customSkins\CH146_0.paa""];";
 		};
@@ -3237,6 +3239,35 @@ class Mission
 			vehicle="I_Heli_Transport_02_F";
 			skill=0.60000002;
 			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn; this setObjectTexture [0, ""customSkins\CH148_0.paa""]; this setObjectTexture [1, ""customSkins\CH148_1.paa""]; this setObjectTexture [2, ""customSkins\CH148_2.paa""];";
+		};
+		class Item213
+		{
+			position[]={15247.42,18.009893,17330.629};
+			azimut=135.55975;
+			id=277;
+			side="EMPTY";
+			vehicle="I_MRAP_03_F";
+			skill=0.60000002;
+		};
+		class Item214
+		{
+			position[]={15186.274,17.928368,17290.551};
+			azimut=-314.91901;
+			id=278;
+			side="EMPTY";
+			vehicle="B_G_Offroad_01_armed_F";
+			skill=0.60000002;
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
+		};
+		class Item215
+		{
+			position[]={15177.122,17.911524,17298.479};
+			azimut=44.224998;
+			id=279;
+			side="EMPTY";
+			vehicle="B_G_Offroad_01_F";
+			skill=0.60000002;
+			init="_nul0 = [this,300,3600] call PO3_fnc_setObjectRespawn;";
 		};
 	};
 	class Markers
