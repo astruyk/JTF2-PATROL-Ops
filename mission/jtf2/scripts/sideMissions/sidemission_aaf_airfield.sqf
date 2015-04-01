@@ -9,7 +9,7 @@ createMarker ["SM_AACAirfield_A10_Circle",[11543.948,11739.217,22.834686]];
 	"SM_AACAirfield_A10_Circle" setMarkerColor "ColorRed";
 createMarker ["SM_AACAirfield_A10_Label",[11516.199,11697.833,22.96591]];
 	"SM_AACAirfield_A10_Label" setMarkerShape "ICON";
-	"SM_AACAirfield_A10_Label" setMarkerType "Empty";
+	"SM_AACAirfield_A10_Label" setMarkerType "mil_destroy";
 	"SM_AACAirfield_A10_Label" setMarkerColor "ColorRed";
 	"SM_AACAirfield_A10_Label" setMarkerText "Neutralize Airfield Defenses";
 // --Vehicles/Objects--
