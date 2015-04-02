@@ -7,10 +7,6 @@ createMarker ["SideMission_AAA_Ferohaki",[16075.261,11061.844,35.509972]];
 	"SideMission_AAA_Ferohaki" setMarkerSize [1000,1000];
 	"SideMission_AAA_Ferohaki" setMarkerBrush "Border";
 	"SideMission_AAA_Ferohaki" setMarkerColor "ColorRed";
-createMarker ["SideMission_AAA_Faronaki_Label",[16032.683,11004.847,37.221596]];
-	"SideMission_AAA_Faronaki_Label" setMarkerShape "ICON";
-	"SideMission_AAA_Faronaki_Label" setMarkerType "mil_warning";
-	"SideMission_AAA_Faronaki_Label" setMarkerColor "ColorRed";
 // --Units--
 _group0 = createGroup east;
 	_unit0 = _group0 createUnit ["O_APC_Tracked_02_cannon_F",[15122.072,11236.41,0],[],0,"CAN_COLLIDE"];
