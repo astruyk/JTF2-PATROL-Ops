@@ -13,27 +13,34 @@ if (isServer) then
 			"roadblock_small_lakka",
 			"roadblock_ambush_Agios_Dionysios",
 			"roadblock_med_southeast",
-			"roadblock_rodopoli"
+			"roadblock_rodopoli",
+			"roadblock_small_neochori"
 		];
+	_roadblockSpawnChance = 3 / (count _roadblocks);
 	
 	_sidemissions =
 		[
 			"sidemission_aaa_pyrsos",
 			"sidemission_aaf_airfield",
-			"sidemission_aaa_faronaki"
+			"sidemission_aaa_faronaki",
+			"sidemission_aaa_peninsula_s"
 		];
-		
+	_sideMissionSpawnChance = 2 / (count _sideMissions);
+	
 	_patrols =
 		[
 			"patrol_rodopoli",
 			"patrol_negades",
-			"patrol_boats_pyrogos_bay"
+			"patrol_boats_pyrogos_bay",
+			"patrol_mechanized_Firini_Athira"
 		];
-	
+	_patrolSpawnChance = 3 / (count _patrols);
+
 	_convoys =
 		[
 			"convoy_light_east"
 		];
+	_convoySpawnChance = 0.75;
 
 	if (_difficultyFactor != 0) then
 	{
@@ -42,6 +49,11 @@ if (isServer) then
 			{
 				if ((_spawnChance < 0) || (random 1) <= _spawnChance) then { [] execVM ("jtf2\scripts\sideMissions\" + _x + ".sqf"); };
 			} forEach (_x select 0);
-		} forEach [[_roadblocks, 0.75], [_sidemissions, 0.5], [_patrols, 0.75], [_convoys, 0.8]];
+		} forEach [
+				[_roadblocks, _roadblockSpawnChance],
+				[_sidemissions, _sideMissionSpawnChance],
+				[_patrols, _patrolSpawnChance],
+				[_convoys, _convoySpawnChance]
+			];
 	};
 };
