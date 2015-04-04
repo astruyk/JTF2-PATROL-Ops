@@ -37,6 +37,9 @@ _authorizedUsers = [
 	"76561198018855160", // Joseph
 	"76561198097876837", // CalebKT
 	"76561198027748951", // Wilks
+	"76561198063704566", // Striker
+	"76561198070771138", // Lookout
+	"76561198070771138", // Lorenzo	
 	"0"// Placeholder because I'm lazy
 ];
 
