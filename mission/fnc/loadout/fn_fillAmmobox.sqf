@@ -43,10 +43,10 @@ while {alive _cache} do {
 	if (isClass(configFile >> "CfgPatches" >> "XLA_FixedArsenal")) then
 	{
 		// Remove all the virtual things from the box
-		[_cache, ([_cache] call BIS_fnc_getVirtualBackpackCargo)] call XLA_fnc_removeVirtualBackpackCargo;
-		[_cache, ([_cache] call BIS_fnc_getVirtualItemCargo)] call XLA_fnc_removeVirtualItemCargo;
-		[_cache, ([_cache] call BIS_fnc_getVirtualMagazineCargo)] call XLA_fnc_removeVirtualMagazineCargo;
-		[_cache, ([_cache] call BIS_fnc_getVirtualWeaponCargo)] call XLA_fnc_removeVirtualWeaponCargo;
+		[_cache, ([_cache] call XLA_fnc_getVirtualBackpackCargo)] call XLA_fnc_removeVirtualBackpackCargo;
+		[_cache, ([_cache] call XLA_fnc_getVirtualItemCargo)] call XLA_fnc_removeVirtualItemCargo;
+		[_cache, ([_cache] call XLA_fnc_getVirtualMagazineCargo)] call XLA_fnc_removeVirtualMagazineCargo;
+		[_cache, ([_cache] call XLA_fnc_getVirtualWeaponCargo)] call XLA_fnc_removeVirtualWeaponCargo;
 		
 		// Add all of the new virtual items we want in the box.
 		[_cache, _data select 0] call XLA_fnc_addVirtualWeaponCargo;
@@ -56,7 +56,7 @@ while {alive _cache} do {
 		[_cache, _data select 4] call XLA_fnc_addVirtualItemCargo;
 
 		// Mark the object as an arsenal object
-		["AmmoboxInit", [_cache, false, {true}]] call XLA_fnc_arsenal;
+		["AmmoboxInit", [_cache, false, {true}, "XLA Fixed Arsenal", false]] call XLA_fnc_arsenal;
 	}
 	else
 	{
