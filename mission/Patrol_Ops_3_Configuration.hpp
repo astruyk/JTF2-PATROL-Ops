@@ -228,7 +228,7 @@ PO3_CfgLogistics_UnitLoadouts = [
 				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
 				,"Titan_AA","Titan_AP","Titan_AT"
 			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F", "150Rnd_762x51_Box", "150Rnd_762x51_Box_Tracer","130Rnd_338_Mag","150Rnd_93x64_Mag"
+				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F", "150Rnd_762x54_Box", "150Rnd_762x54_Box_Tracer","130Rnd_338_Mag","150Rnd_93x64_Mag","B_338_NM_Ball","B_93x64_Ball"
 			/*CSAT*/
 		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
 			/*AAF*/
