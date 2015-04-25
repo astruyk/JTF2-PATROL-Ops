@@ -159,277 +159,287 @@ PO3_CfgSupport_UASVehicles = [ // [WEST,EAST,RESISTANCE]
 	["B_UGV_01_rcws_F",	"O_UGV_01_rcws_F",	"I_UGV_01_rcws_F"	]	// UGV
 ];
 
+_commonWeapons = [
+	"MineDetector",
+	"arifle_SDAR_F",
+	"hgun_P07_F",
+	"hgun_Pistol_heavy_01_F",
+	"arifle_MXC_Black_F",
+	"arifle_MXC_F"
+	];
+_commonMags = [
+	"HandGrenade",
+	"SmokeShell",
+	"SmokeShellYellow",
+	"SmokeShellGreen",
+	"SmokeShellRed",
+	"SmokeShellPurple",
+	"SmokeShellOrange",
+	"SmokeShellBlue",
+	"Chemlight_green",
+	"Chemlight_red",
+	"Chemlight_yellow",
+	"Chemlight_blue",
+	"B_IR_Grenade",
+	"Titan_AA",
+	"Titan_AP",
+	"Titan_AT",
+	"200Rnd_65x39_cased_Box",
+	"200Rnd_65x39_cased_Box_Tracer",
+	"NLAW_F",
+	"DemoCharge_Remote_Mag",
+	"RPG32_F",
+	"RPG32_HE_F"
+	];
+_commonItems = [
+	"Binocular",
+	"Rangefinder",
+	"FirstAidKit",
+	"ItemCompass",
+	"ItemGPS",
+	"ItemMap",
+	"ItemRadio",
+	"ItemWatch",
+	"Medikit",
+	"optic_Aco",
+	"optic_ACO_grn",
+	"optic_ACO_grn_smg",
+	"optic_Aco_smg",
+	"optic_Holosight",
+	"optic_Holosight_smg",
+	"optic_Arco",
+	"optic_MRCO",
+	"optic_Hamr",
+	"bipod_01_F_blk",
+	"bipod_01_F_mtp",
+	"bipod_01_F_snd",
+	"bipod_02_F_blk",
+	"bipod_02_F_hex",
+	"bipod_02_F_tan",
+	"bipod_03_F_blk",
+	"bipod_03_F_oli",
+	"NVGoggles",
+	"H_Shemag_khk",
+	"H_Shemag_olive",
+	"H_Shemag_olive_hs",
+	"H_Shemag_tan",
+	"H_Booniehat_mcamo",
+	"H_MilCap_mcamo",
+	"H_HelmetB",
+	"H_HelmetB_camo",
+	"H_HelmetB_desert",
+	"H_HelmetB_light",
+	"H_HelmetB_light_desert",
+	"H_HelmetB_light_grass",
+	"H_HelmetB_light_sand",
+	"H_HelmetB_paint",
+	"H_HelmetB_plain_mcamo",
+	"H_HelmetB_sand",
+	"U_B_CombatUniform_mcam",
+	"U_B_CombatUniform_mcam_vest",
+	"U_B_CTRG_1",
+	"U_B_CTRG_3",
+	"U_B_Wetsuit",
+	"V_PlateCarrier1_rgr",
+	"V_PlateCarrier3_rgr",
+	"V_PlateCarrier1_blk",
+	"V_PlateCarrierL_CTRG",
+	"V_PlateCarrierH_CTRG",
+	"V_RebreatherB"
+	];
+_commonBackpacks = [
+	"B_AssaultPack_blk",
+	"B_AssaultPack_khk",
+	"B_AssaultPack_mcamo",
+	"B_Carryall_khk",
+	"B_Carryall_mcamo",
+	"B_FieldPack_blk",
+	"B_FieldPack_khk",
+	"B_Kitbag_mcamo",
+	"B_Kitbag_rgr",
+	"B_Kitbag_cbr",
+	"B_TacticalPack_mcamo",
+	"B_TacticalPack_blk",
+	"B_TacticalPack_oli",
+	"B_Parachute"
+	];
+
 //PO3_preDefinedClassLoadouts = call compileFinal preprocessFileLineNumbers "config\PO3_preDefinedGearLoadouts_A3_NATO.sqf";
 PO3_CfgLogistics_UnitLoadouts = [
-	["Rifleman"
-		,[/*Weapons*/
-				"MineDetector","arifle_SDAR_F"
-			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MX_GL_Black_F","arifle_MXC_Black_F","arifle_MX_F","arifle_MX_GL_F","arifle_MXC_F"
-			/*CSAT*/
-		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F"
-			/*AAF*/
-		//		,"hgun_ACPC2_F","hgun_Pistol_heavy_02_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20C_F"
-		]
-		,[/*Mags*/
-				"DemoCharge_Remote_Mag","SatchelCharge_Remote_Mag","ATMine_Range_Mag","ClaymoreDirectionalMine_Remote_Mag","APERSMine_Range_Mag","APERSBoundingMine_Range_Mag","SLAMDirectionalMine_Wire_Mag","APERSTripMine_Wire_Mag"
-				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
-				,"Titan_AA","Titan_AP","Titan_AT"
-			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
-			/*CSAT*/
-		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
-			/*AAF*/
-		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
-		]
-		,[/*Items*/
-				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
-				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
-				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
-				,"bipod_01_F_blk","bipod_01_F_mtp","bipod_01_F_snd","bipod_02_F_blk","bipod_02_F_hex","bipod_02_F_tan","bipod_03_F_blk","bipod_03_F_oli"
-			/*NATO*/
-				,"NVGoggles"
-				,"H_Booniehat_mcamo","H_MilCap_mcamo","H_HelmetB","H_HelmetB_camo","H_HelmetB_desert","H_HelmetB_light","H_HelmetB_light_desert","H_HelmetB_light_grass","H_HelmetB_light_sand","H_HelmetB_paint","H_HelmetB_plain_mcamo","H_HelmetB_sand"
-				,"U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_vest","U_B_CTRG_1","U_B_CTRG_3","U_B_Wetsuit"
-				,"V_PlateCarrier1_rgr","V_PlateCarrier3_rgr","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_RebreatherB","V_PlateCarrierGL_mtp","V_PlateCarrierGL_blk","V_PlateCarrierGL_rgr"
-			/*CSAT*/
-		//		,"NVGoggles_OPFOR","O_UavTerminal"
-		//		,"H_Booniehat_tan","H_Cap_oli_hs","H_MilCap_ocamo","H_MilCap_oucamo","H_HelmetO_ocamo","H_HelmetO_oucamo"
-		//		,"U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_O_Wetsuit"
-		//		,"V_HarnessO_brn","V_HarnessO_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry","V_RebreatherIR"
-			/*AAF*/
-		//		,"NVGoggles_INDEP","I_UavTerminal"
-		//		,"H_Booniehat_dgtl","H_MilCap_dgtl","H_HelmetIA","H_HelmetIA_camo","H_HelmetIA_net"
-		//		,"U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_Wetsuit"
-		//		,"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_RebreatherIA"
-		]
-		,[/*Backpacks*/
-				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
-			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo"
-			/*CSAT*/
-		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
-			/*AAF*/
-		//		,"B_AssaultPack_dgtl","B_Carryall_oli","B_FieldPack_oli","B_TacticalPack_oli","I_UAV_01_backpack_F","I_Mortar_01_support_F","I_Mortar_01_weapon_F"
+	["Rifleman",
+		[/*Weapons*/
+			"arifle_MX_Black_F",
+			"arifle_MX_GL_Black_F",
+			"arifle_MX_F",
+			"arifle_MX_GL_F"
+		],
+		[/*Mags*/
+			"SatchelCharge_Remote_Mag",
+			"ClaymoreDirectionalMine_Remote_Mag",
+			"APERSMine_Range_Mag",
+			"APERSBoundingMine_Range_Mag"
+		],
+		[/*Items*/
+			"V_PlateCarrierGL_mtp",
+			"V_PlateCarrierGL_blk",
+			"V_PlateCarrierGL_rgr",
+			"V_PlateCarrierSpec_blk",
+			"V_PlateCarrierSpec_mtp",
+			"V_BandollierB_blk",
+			"V_BandollierB_khk",
+			"V_BandollierB_oli"
+		],
+		[/*Backpacks*/
 		]
 	],
 	["MachineGunner"
 		,[/*Weapons*/
-				"MineDetector","arifle_SDAR_F"
-			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MX_SW_Black_F","arifle_MX_F","arifle_MX_SW_F","LMG_Mk200_F","LMG_Zafir_F","MMG_02_black_F","MMG_02_camo_F","MMG_02_sand_F","MMG_01_tan_F","MMG_01_hex_F"
-			/*CSAT*/
-		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","LMG_Zafir_F"
-			/*AAF*/
-		//		,"hgun_ACPC2_F","hgun_Pistol_heavy_02_F","arifle_Mk20_F","arifle_Mk20C_F","LMG_Mk200_F"
+			"arifle_MX_SW_Black_F",
+			"arifle_MX_SW_F",
+			"LMG_Mk200_F",
+			"LMG_Zafir_F",
+			"MMG_02_black_F",
+			"MMG_02_camo_F",
+			"MMG_02_sand_F",
+			"MMG_01_tan_F",
+			"MMG_01_hex_F"
 		]
 		,[/*Mags*/
-				"Laserbatteries","DemoCharge_Remote_Mag"
-				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
-				,"Titan_AA","Titan_AP","Titan_AT"
-			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F", "150Rnd_762x54_Box", "150Rnd_762x54_Box_Tracer","130Rnd_338_Mag","150Rnd_93x64_Mag","B_338_NM_Ball","B_93x64_Ball"
-			/*CSAT*/
-		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
-			/*AAF*/
-		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
+			"150Rnd_762x54_Box",
+			"150Rnd_762x54_Box_Tracer",
+			"130Rnd_338_Mag",
+			"150Rnd_93x64_Mag",
+			"B_338_NM_Ball",
+			"B_93x64_Ball"
 		]
 		,[/*Items*/
-				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
-				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
-				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
-				,"bipod_01_F_blk","bipod_01_F_mtp","bipod_01_F_snd","bipod_02_F_blk","bipod_02_F_hex","bipod_02_F_tan","bipod_03_F_blk","bipod_03_F_oli"
-			/*NATO*/
-				,"NVGoggles"
-				,"H_Booniehat_mcamo","H_MilCap_mcamo","H_HelmetB","H_HelmetB_camo","H_HelmetB_desert","H_HelmetB_grass","H_HelmetB_light","H_HelmetB_light_desert","H_HelmetB_light_grass","H_HelmetB_light_sand","H_HelmetB_paint","H_HelmetB_plain_mcamo","H_HelmetB_sand"
-				,"U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_tshirt","U_B_CombatUniform_mcam_vest","U_B_CTRG_1","U_B_CTRG_3","U_B_Wetsuit"
-				,"V_PlateCarrier1_rgr","V_PlateCarrier3_rgr","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_RebreatherB","V_PlateCarrierSpec_mtp","V_PlateCarrierSpec_rgr","V_PlateCarrierSpec_blk"
-			/*CSAT*/
-		//		,"NVGoggles_OPFOR","O_UavTerminal"
-		//		,"H_Booniehat_tan","H_Cap_oli_hs","H_MilCap_ocamo","H_MilCap_oucamo","H_PilotHelmetHeli_O","H_CrewHelmetHeli_O","H_HelmetCrew_O","H_PilotHelmetFighter_O","H_HelmetLeaderO_ocamo","H_HelmetLeaderO_oucamo","H_HelmetO_ocamo","H_HelmetO_oucamo","H_HelmetSpecB","H_HelmetSpecB_blk","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecO_blk","H_HelmetSpecO_ocamo"
-		//		,"U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_O_GhillieSuit","U_O_OfficerUniform_ocamo","U_O_PilotCoveralls","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_O_Wetsuit"
-		//		,"V_HarnessO_brn","V_HarnessO_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry","V_RebreatherIR"
-			/*AAF*/
-		//		,"NVGoggles_INDEP","I_UavTerminal"
-		//		,"H_Booniehat_dgtl","H_MilCap_dgtl","H_PilotHelmetHeli_I","H_CrewHelmetHeli_I","H_HelmetCrew_I","H_PilotHelmetFighter_I","H_HelmetIA","H_HelmetIA_camo","H_HelmetIA_net"
-		//		,"U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_GhillieSuit","U_I_HeliPilotCoveralls","U_I_OfficerUniform","U_I_pilotCoveralls","U_I_Wetsuit"
-		//		,"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_RebreatherIA"
+			"V_PlateCarrierSpec_blk",
+			"V_PlateCarrierSpec_mtp",
+			"V_Chestrig_rgr",
+			"V_Chestrig_khk",
+			"V_Chestrig_blk",
+			"V_Chestrig_oli",
+			"optic_tws_mg"
 		]
 		,[/*Backpacks*/
-				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
-			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo"
-			/*CSAT*/
-		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
-			/*AAF*/
-		//		,"B_AssaultPack_dgtl","B_Carryall_oli","B_FieldPack_oli","B_TacticalPack_oli","I_UAV_01_backpack_F","I_Mortar_01_support_F","I_Mortar_01_weapon_F"
 		]
 	],
 	["MissileSpecialist"
 		,[/*Weapons*/
-				"MineDetector","arifle_SDAR_F"
-			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F"
-				,"arifle_MX_Black_F","arifle_MXC_Black_F","arifle_MX_F","arifle_MXC_F"
-				,"launch_B_Titan_F","launch_B_Titan_short_F","launch_NLAW_F"
-			/*CSAT*/
-		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F"
-		//		,"launch_O_Titan_F","launch_O_Titan_short_F","launch_RPG32_F"
-			/*AAF*/
-		//		,"hgun_ACPC2_F","hgun_Pistol_heavy_02_F","arifle_Mk20_F","arifle_Mk20C_F"
-		//		,"launch_I_Titan_F","launch_I_Titan_short_F","launch_NLAW_F"
+			"arifle_MX_Black_F",
+			"arifle_MX_F",
+			"launch_B_Titan_F",
+			"launch_B_Titan_short_F",
+			"launch_RPG32_F",
+			"launch_NLAW_F"
 		]
 		,[/*Mags*/
-				"Laserbatteries","DemoCharge_Remote_Mag"
-				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
-				,"Titan_AA","Titan_AP","Titan_AT"
-			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
-			/*CSAT*/
-		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
-			/*AAF*/
-		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
 		]
 		,[/*Items*/
-				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
-				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
-				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
-				,"bipod_01_F_blk","bipod_01_F_mtp","bipod_01_F_snd","bipod_02_F_blk","bipod_02_F_hex","bipod_02_F_tan","bipod_03_F_blk","bipod_03_F_oli"
-			/*NATO*/
-				,"NVGoggles"
-				,"H_Booniehat_mcamo","H_MilCap_mcamo","H_HelmetB","H_HelmetB_camo","H_HelmetB_desert","H_HelmetB_grass","H_HelmetB_light","H_HelmetB_light_desert","H_HelmetB_light_grass","H_HelmetB_light_sand","H_HelmetB_paint","H_HelmetB_plain_mcamo","H_HelmetB_sand"
-				,"U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_tshirt","U_B_CombatUniform_mcam_vest","U_B_CTRG_1","U_B_CTRG_3","U_B_Wetsuit"
-				,"V_PlateCarrier1_rgr","V_PlateCarrier3_rgr","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_RebreatherB","V_PlateCarrierGL_mtp","V_PlateCarrierGL_blk","V_PlateCarrierGL_rgr"
-			/*CSAT*/
-		//		,"NVGoggles_OPFOR"
-		//		,"H_Booniehat_tan","H_Cap_oli_hs","H_MilCap_ocamo","H_MilCap_oucamo","H_PilotHelmetHeli_O","H_CrewHelmetHeli_O","H_HelmetCrew_O","H_PilotHelmetFighter_O","H_HelmetLeaderO_ocamo","H_HelmetLeaderO_oucamo","H_HelmetO_ocamo","H_HelmetO_oucamo","H_HelmetSpecB","H_HelmetSpecB_blk","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecO_blk","H_HelmetSpecO_ocamo"
-		//		,"U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_O_GhillieSuit","U_O_OfficerUniform_ocamo","U_O_PilotCoveralls","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_O_Wetsuit"
-		//		,"V_HarnessO_brn","V_HarnessO_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry","V_RebreatherIR"
-			/*AAF*/
-		//		,"NVGoggles_INDEP"
-		//		,"H_Booniehat_dgtl","H_MilCap_dgtl","H_PilotHelmetHeli_I","H_CrewHelmetHeli_I","H_HelmetCrew_I","H_PilotHelmetFighter_I","H_HelmetIA","H_HelmetIA_camo","H_HelmetIA_net"
-		//		,"U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_GhillieSuit","U_I_HeliPilotCoveralls","U_I_OfficerUniform","U_I_pilotCoveralls","U_I_Wetsuit"
-		//		,"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_RebreatherIA"
+			"V_PlateCarrierGL_mtp",
+			"V_PlateCarrierGL_blk",
+			"V_PlateCarrierGL_rgr",
+			"V_PlateCarrierSpec_blk",
+			"V_PlateCarrierSpec_mtp"
 		]
 		,[/*Backpacks*/
-				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
-			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo"
-			/*CSAT*/
-		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
-			/*AAF*/
-		//		,"B_AssaultPack_dgtl","B_Carryall_oli","B_FieldPack_oli","B_TacticalPack_oli","I_UAV_01_backpack_F","I_Mortar_01_support_F","I_Mortar_01_weapon_F"
 		]
 	],
 	["Recon"
 		,[/*Weapons*/
-				"MineDetector","arifle_SDAR_F"
-			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_Black_F","arifle_MXC_Black_F","arifle_MXM_Black_F","arifle_MX_F","arifle_MXC_F","arifle_MXM_F","srifle_EBR_F","SMG_01_F","srifle_DMR_03_F","srifle_DMR_03_multicam_F","srifle_DMR_03_khaki_F","srifle_DMR_03_tan_F","srifle_DMR_03_woodland_F","srifle_DMR_06_camo_F","srifle_DMR_06_olive_F"
-			/*CSAT*/
-		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","srifle_DMR_01_F","srifle_GM6_F","SMG_02_F"
-		//		,"launch_RPG32_F"
-			/*AAF*/
-		//		,"hgun_ACPC2_F","hgun_Pistol_heavy_02_F","arifle_Mk20_F","arifle_Mk20C_F","srifle_EBR_F","srifle_GM6_F","hgun_PDW2000_F"
-		//		,"launch_NLAW_F"
+			"arifle_MXM_Black_F",
+			"arifle_MXM_F",
+			"srifle_EBR_F",
+			"srifle_DMR_03_F",
+			"srifle_DMR_03_multicam_F",
+			"srifle_DMR_03_khaki_F",
+			"srifle_DMR_03_tan_F",
+			"srifle_DMR_03_woodland_F",
+			"srifle_DMR_04_F",
+			"srifle_DMR_04_Tan_F",
+			"srifle_DMR_06_camo_F",
+			"srifle_DMR_06_olive_F"
 		]
 		,[/*Mags*/
-				"Laserbatteries","DemoCharge_Remote_Mag","SatchelCharge_Remote_Mag","ClaymoreDirectionalMine_Remote_Mag"
-				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
-			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","10Rnd_762x51_Mag","20Rnd_762x51_Mag"
-			/*CSAT*/
-		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
-			/*AAF*/
-		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
+			"Laserbatteries",
+			"10Rnd_762x51_Mag",
+			"20Rnd_762x51_Mag"
 		]
 		,[/*Items*/
-				"Binocular","Laserdesignator","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit"
-				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
-				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
-				,"bipod_01_F_blk","bipod_01_F_mtp","bipod_01_F_snd","bipod_02_F_blk","bipod_02_F_hex","bipod_02_F_tan","bipod_03_F_blk","bipod_03_F_oli"
-			/*NATO*/
-				,"NVGoggles","B_UavTerminal"
-				,"H_Booniehat_mcamo","H_Cap_headphones","H_MilCap_mcamo","H_HelmetB","H_HelmetB_black","H_HelmetB_grass","H_HelmetB_light","H_HelmetB_light_black","H_HelmetB_light_snakeskin","H_HelmetB_plain_blk","H_HelmetB_snakeskin"
-				,"U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_tshirt","U_B_CombatUniform_mcam_vest","U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3","U_B_GhillieSuit","U_B_Wetsuit"
-				,"V_PlateCarrier1_rgr","V_PlateCarrier3_rgr","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_RebreatherB","V_PlateCarrierSpec_rgr"
-			/*CSAT*/
-		//		,"NVGoggles_OPFOR","O_UavTerminal"
-		//		,"H_Booniehat_tan","H_Cap_oli_hs","H_MilCap_ocamo","H_MilCap_oucamo","H_PilotHelmetHeli_O","H_CrewHelmetHeli_O","H_HelmetCrew_O","H_PilotHelmetFighter_O","H_HelmetLeaderO_ocamo","H_HelmetLeaderO_oucamo","H_HelmetO_ocamo","H_HelmetO_oucamo","H_HelmetSpecB","H_HelmetSpecB_blk","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecO_blk","H_HelmetSpecO_ocamo"
-		//		,"U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_O_GhillieSuit","U_O_OfficerUniform_ocamo","U_O_PilotCoveralls","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_O_Wetsuit"
-		//		,"V_HarnessO_brn","V_HarnessO_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry","V_RebreatherIR"
-			/*AAF*/
-		//		,"NVGoggles_INDEP","I_UavTerminal"
-		//		,"H_Booniehat_dgtl","H_MilCap_dgtl","H_PilotHelmetHeli_I","H_CrewHelmetHeli_I","H_HelmetCrew_I","H_PilotHelmetFighter_I","H_HelmetIA","H_HelmetIA_camo","H_HelmetIA_net"
-		//		,"U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_GhillieSuit","U_I_HeliPilotCoveralls","U_I_OfficerUniform","U_I_pilotCoveralls","U_I_Wetsuit"
-		//		,"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_RebreatherIA"
+			"Laserdesignator",
+			"B_UavTerminal",
+			"H_Cap_headphones",
+			"U_B_GhillieSuit",
+			"U_B_FullGhillie_sard",
+			"U_B_FullGhillie_lsh",
+			"U_B_FullGhillie_ard",
+			"optic_AMS",
+			"optic_AMS_khk",
+			"optic_AMS_snd",
+			"optic_DMS",
+			"optic_KHS_blk",
+			"optic_KHS_hex",
+			"optic_KHS_old",
+			"optic_KHS_tan",
+			"optic_LRPS",
+			"optic_SOS",
+			"optic_NVS"
 		]
 		,[/*Backpacks*/
-				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
-			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_UAV_01_backpack_F","B_Static_Designator_01_weapon_F"
-			/*CSAT*/
-		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
-			/*AAF*/
-		//		,"B_AssaultPack_dgtl","B_Carryall_oli","B_FieldPack_oli","B_TacticalPack_oli","I_UAV_01_backpack_F","I_Mortar_01_support_F","I_Mortar_01_weapon_F"
+			"B_UAV_01_backpack_F",
+			"B_Static_Designator_01_weapon_F"
 		]
 	],
 	["Support"
 		,[/*Weapons*/
-				"MineDetector"
-			/*NATO*/
-				,"hgun_P07_F","hgun_Pistol_heavy_01_F","arifle_MX_GL_F","arifle_MXC_F","SMG_01_F", "SMG_02_F", "hgun_PDW2000_F"
-				,"launch_NLAW_F"
-			/*CSAT*/
-		//		,"hgun_Rook40_F","hgun_Pistol_heavy_02_F","arifle_Katiba_C_F","arifle_Katiba_F","arifle_Katiba_GL_F","SMG_02_F"
-		//		,"launch_RPG32_F"
-			/*AAF*/
-		//		,"hgun_ACPC2_F","hgun_Pistol_heavy_02_F","arifle_Mk20_F","arifle_Mk20_GL_F","arifle_Mk20C_F","hgun_PDW2000_F"
-		//		,"launch_NLAW_F"
+				"arifle_MX_GL_F",
+				"SMG_01_F",
+				"SMG_02_F",
+				"hgun_PDW2000_F",
+				"launch_NLAW_F"
 		]
 		,[/*Mags*/
-				"Laserbatteries","DemoCharge_Remote_Mag","SatchelCharge_Remote_Mag","ATMine_Range_Mag","ClaymoreDirectionalMine_Remote_Mag","APERSMine_Range_Mag","APERSBoundingMine_Range_Mag","SLAMDirectionalMine_Wire_Mag","APERSTripMine_Wire_Mag"
-				,"HandGrenade","SmokeShell","SmokeShellYellow","SmokeShellGreen","SmokeShellRed","SmokeShellPurple","SmokeShellOrange","SmokeShellBlue","Chemlight_green","Chemlight_red","Chemlight_yellow","Chemlight_blue","B_IR_Grenade","I_IR_Grenade","O_IR_Grenade"
-				,"Titan_AA","Titan_AP","Titan_AT"
-			/*NATO*/
-				,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
-			/*CSAT*/
-		//		,"150Rnd_762x51_Box","150Rnd_762x51_Box_Tracer","RPG32_F","RPG32_HE_F"
-			/*AAF*/
-		//		,"200Rnd_65x39_cased_Box","200Rnd_65x39_cased_Box_Tracer","NLAW_F"
+				"SatchelCharge_Remote_Mag",
+				"ATMine_Range_Mag",
+				"ClaymoreDirectionalMine_Remote_Mag",
+				"APERSMine_Range_Mag",
+				"APERSBoundingMine_Range_Mag",
+				"SLAMDirectionalMine_Wire_Mag",
+				"APERSTripMine_Wire_Mag"
 		]
 		,[/*Items*/
-				"Binocular","Rangefinder","FirstAidKit","ItemCompass","ItemGPS","ItemMap","ItemRadio","ItemWatch","Medikit","ToolKit"
-				,"H_Shemag_khk","H_Shemag_olive","H_Shemag_olive_hs","H_Shemag_tan"
-				,"V_BandollierB_blk","V_BandollierB_khk","V_BandollierB_oli"
-				,"bipod_01_F_blk","bipod_01_F_mtp","bipod_01_F_snd","bipod_02_F_blk","bipod_02_F_hex","bipod_02_F_tan","bipod_03_F_blk","bipod_03_F_oli"
-			/*NATO*/
-				,"NVGoggles"
-				,"H_Booniehat_mcamo","H_Cap_headphones","H_MilCap_mcamo","H_PilotHelmetHeli_B","H_CrewHelmetHeli_B","H_HelmetCrew_B","H_PilotHelmetFighter_B","H_HelmetB","H_HelmetB_black","H_HelmetB_camo","H_HelmetB_desert","H_HelmetB_grass","H_HelmetB_light","H_HelmetB_light_black","H_HelmetB_light_desert","H_HelmetB_light_grass","H_HelmetB_light_sand","H_HelmetB_light_snakeskin","H_HelmetB_paint","H_HelmetB_plain_blk","H_HelmetB_plain_mcamo","H_HelmetB_sand","H_HelmetB_snakeskin"
-				,"U_B_CombatUniform_mcam","U_B_CombatUniform_mcam_tshirt","U_B_CombatUniform_mcam_vest","U_B_CTRG_1","U_B_CTRG_2","U_B_CTRG_3","U_B_GhillieSuit","U_B_HeliPilotCoveralls","U_B_PilotCoveralls","U_B_Wetsuit"
-				,"V_PlateCarrier1_rgr","V_PlateCarrier3_rgr","V_PlateCarrierL_CTRG","V_PlateCarrierH_CTRG","V_RebreatherB"
-			/*CSAT*/
-		//		,"NVGoggles_OPFOR"
-		//		,"H_Booniehat_tan","H_Cap_oli_hs","H_MilCap_ocamo","H_MilCap_oucamo","H_PilotHelmetHeli_O","H_CrewHelmetHeli_O","H_HelmetCrew_O","H_PilotHelmetFighter_O","H_HelmetLeaderO_ocamo","H_HelmetLeaderO_oucamo","H_HelmetO_ocamo","H_HelmetO_oucamo","H_HelmetSpecB","H_HelmetSpecB_blk","H_HelmetSpecB_paint1","H_HelmetSpecB_paint2","H_HelmetSpecO_blk","H_HelmetSpecO_ocamo"
-		//		,"U_O_CombatUniform_ocamo","U_O_CombatUniform_oucamo","U_O_GhillieSuit","U_O_OfficerUniform_ocamo","U_O_PilotCoveralls","U_O_SpecopsUniform_blk","U_O_SpecopsUniform_ocamo","U_O_Wetsuit"
-		//		,"V_HarnessO_brn","V_HarnessO_gry","V_HarnessOSpec_brn","V_HarnessOSpec_gry","V_RebreatherIR"
-			/*AAF*/
-		//		,"NVGoggles_INDEP"
-		//		,"H_Booniehat_dgtl","H_MilCap_dgtl","H_PilotHelmetHeli_I","H_CrewHelmetHeli_I","H_HelmetCrew_I","H_PilotHelmetFighter_I","H_HelmetIA","H_HelmetIA_camo","H_HelmetIA_net"
-		//		,"U_I_CombatUniform","U_I_CombatUniform_shortsleeve","U_I_CombatUniform_tshirt","U_I_GhillieSuit","U_I_HeliPilotCoveralls","U_I_OfficerUniform","U_I_pilotCoveralls","U_I_Wetsuit"
-		//		,"V_PlateCarrierIA1_dgtl","V_PlateCarrierIA2_dgtl","V_RebreatherIA"
+				"Rangefinder",
+				"ToolKit",
+				"H_Cap_headphones",
+				"H_PilotHelmetHeli_B",
+				"H_CrewHelmetHeli_B",
+				"H_HelmetCrew_B",
+				"H_PilotHelmetFighter_B",
+				"U_B_HeliPilotCoveralls",
+				"U_B_PilotCoveralls",
+				"V_TacVestIR_blk",
+				"V_TacVest_blk",
+				"V_TacVest_brn",
+				"V_TacVest_camo",
+				"V_TacVest_khk",
+				"V_TacVest_oli",
+				"V_Rangemaster_belt",
+				"V_PlateCarrierIAGL_oli"
 		]
 		,[/*Backpacks*/
-				"B_AssaultPack_blk","B_AssaultPack_khk","B_Carryall_khk","B_FieldPack_blk","B_FieldPack_khk","B_TacticalPack_blk","B_Parachute"
-			/*NATO*/
-				,"B_AssaultPack_mcamo","B_Carryall_mcamo","B_Kitbag_mcamo","B_TacticalPack_mcamo","B_Mortar_01_support_F","B_Mortar_01_weapon_F"
-			/*CSAT*/
-		//		,"B_AssaultPack_ocamo","B_Carryall_ocamo","B_Carryall_oucamo","B_FieldPack_ocamo","B_FieldPack_oucamo","B_TacticalPack_ocamo","O_UAV_01_backpack_F","O_Mortar_01_support_F","O_Mortar_01_weapon_F"
-			/*AAF*/
-		//		,"B_AssaultPack_dgtl","B_Carryall_oli","B_FieldPack_oli","B_TacticalPack_oli","I_UAV_01_backpack_F","I_Mortar_01_support_F","I_Mortar_01_weapon_F"
+				"B_Mortar_01_support_F",
+				"B_Mortar_01_weapon_F"
 		]
 	]
 ];
+
+// Actually combine the common mags and common items.
+{
+	(_x select 1)  append _commonWeapons;
+	(_x select 2) append _commonMags;
+	(_x select 3) append _commonItems;
+	(_x select 4) append _commonBackpacks;
+} forEach (PO3_CfgLogistics_UnitLoadouts);
 
 PO3_CfgLogistics_UnitLoadoutBlacklist = [
 	 "optic_Nightstalker","optic_tws","optic_tws_mg"
