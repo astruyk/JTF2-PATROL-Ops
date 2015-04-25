@@ -210,6 +210,8 @@ _commonItems = [
 	"optic_Arco",
 	"optic_MRCO",
 	"optic_Hamr",
+	"acc_pointer_IR",
+	"acc_flashlight",
 	"bipod_01_F_blk",
 	"bipod_01_F_mtp",
 	"bipod_01_F_snd",
