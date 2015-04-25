@@ -65,24 +65,6 @@ PO3_fnc_getWeaponsMags = {
 _magazines = _magazines + (_weapons call PO3_fnc_getWeaponsMags);
 { _magazines = (_magazines - [_x]) + [_x]; } foreach _magazines;
 
-PO3_fnc_getWeaponAttachments = {
-	private ["_weapons","_itemList","_muzzles","_cows","_pointers"];
-
-	_weapons = _this;
-	_itemList = [];
-
-	{
-		_muzzles	= getArray(configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo" >> "MuzzleSlot" >> "compatibleitems");
-		_cows		= getArray(configfile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo" >> "CowsSlot" >> "compatibleItems");
-		_pointers	= getArray(configFile >> "CfgWeapons" >> _x >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleitems");
-		_itemList = _itemList + _muzzles + _cows + _pointers;
-	} forEach _weapons;
-
-	{ if( _x IN PO3_CfgLogistics_UnitLoadoutBlacklist ) then { _itemList = _itemList - [_x]; }; }forEach _itemList;
-
-	_itemList;
-};
-_items = _items + (_weapons call PO3_fnc_getWeaponAttachments);
 if (PO3_mod_acre_enabled) then {_items = _items + ["ACRE_PRC148","ACRE_PRC148_UHF","ACRE_PRC343","ACRE_PRC117F"] };
 { _items = (_items - [_x]) + [_x]; } foreach _items;
 
