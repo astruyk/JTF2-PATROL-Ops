@@ -139,6 +139,6 @@ if(!isDedicated && !PO3_debug) then {
 	[] execVM "scripts\IgiLoad\IgiLoadInit.sqf";
 };
 
-["PO3_taskmaster"] call PO3_fnc_runTaskSequence;
+["po3_taskmaster"] call PO3_fnc_runTaskSequence;
 
 [] call PO3_fnc_outrosequence;

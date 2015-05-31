@@ -2,30 +2,30 @@ private["_list","_j","_next","_prev","_lim","_script"];
 
 // ==== PO3 Mission Types ==================================================================================
 PO3_missions = [
-	 "PO3_task_m01_attackBase"			// <!-- TEST
-	,"PO3_task_m02_attackConvoyArmour"	// <!-- TEST
-//	,"PO3_task_m03_attackConvoySupply"	// <!-- TEST
-//	,"PO3_task_m04_captureIntel"		// <!-- TEST
-	,"PO3_task_m05_captureOfficer"		// <!-- TEST
-	,"PO3_task_m06_captureTown"			// <!-- TEST
-	,"PO3_task_m07_captureVehicle"		// <!-- TEST
-	,"PO3_task_m08_clearMinefield"		// <!-- TEST
-//	,"PO3_task_m09_clearRunway"			// <!-- TEST
-//	,"PO3_task_m10_clearSeaMinefield"	// <!-- TEST
-	,"PO3_task_m11_createSupplies"		// <!-- TEST
-	,"PO3_task_m12_createTower"			// <!-- TEST
-	,"PO3_task_m13_defendBase"			// <!-- TEST
-//	,"PO3_task_m14_defendDamagedBoat"	// <!-- TEST
-	,"PO3_task_m15_defendTown"			// <!-- TEST
-	,"PO3_task_m16_destroyArtillery"	// <!-- TEST
-	,"PO3_task_m17_destroyCaches"		// <!-- TEST
-	,"PO3_task_m18_destroyTower"		// <!-- TEST
-	,"PO3_task_m19_intelDrone"			// <!-- TEST
-//	,"PO3_task_m20_rescuePilots"		// <!-- TEST
+	 "po3_task_m01_attackBase"			// <!-- TEST
+	,"po3_task_m02_attackConvoyArmour"	// <!-- TEST
+//	,"po3_task_m03_attackConvoySupply"	// <!-- TEST
+//	,"po3_task_m04_captureIntel"		// <!-- TEST
+	,"po3_task_m05_captureOfficer"		// <!-- TEST
+	,"po3_task_m06_captureTown"			// <!-- TEST
+	,"po3_task_m07_captureVehicle"		// <!-- TEST
+	,"po3_task_m08_clearMinefield"		// <!-- TEST
+//	,"po3_task_m09_clearRunway"			// <!-- TEST
+//	,"po3_task_m10_clearSeaMinefield"	// <!-- TEST
+	,"po3_task_m11_createSupplies"		// <!-- TEST
+	,"po3_task_m12_createTower"			// <!-- TEST
+	,"po3_task_m13_defendBase"			// <!-- TEST
+//	,"po3_task_m14_defendDamagedBoat"	// <!-- TEST
+	,"po3_task_m15_defendTown"			// <!-- TEST
+	,"po3_task_m16_destroyArtillery"	// <!-- TEST
+	,"po3_task_m17_destroyCaches"		// <!-- TEST
+	,"po3_task_m18_destroyTower"		// <!-- TEST
+	,"po3_task_m19_intelDrone"			// <!-- TEST
+//	,"po3_task_m20_rescuePilots"		// <!-- TEST
 ];
 
 _list = PO3_missions;
-//_list = ["PO3_task_m07_captureVehicle"];
+//_list = ["po3_task_m07_captureVehicle"];
 
 _j = (count _list - 1) min (round random (count _list));
 _next = _list select _j;
